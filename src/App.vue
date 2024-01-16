@@ -1,28 +1,57 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar/>
+    <b-container>
+      <LoginUp/>
+
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Authentication from '@/pages/Authentication'
+import Navbar from '@/components/Navbar'
+import LoginUp from '@/pages/LoginUp'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LoginUp,
+    Navbar,
+    Authentication
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: #F3F3F4;
+  min-height: 100vh;
+  padding: 0;
 }
+body{
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding: 0 !important;
+}
+  h3,h5{
+    font-family: 'Marmelad', sans-serif;
+  }
+  h3{
+    padding: 30px 0 10px;
+  }
+  h5{
+    padding: 0 0 10px;
+  }
+  .authentication h3, .authentication h5{
+    text-align: center;
+  }
+  h5 span{
+    font-family: 'Miltonian Tattoo', serif;
+  }
+  .buttons{
+    margin: 0 220px;
+  }
 </style>
