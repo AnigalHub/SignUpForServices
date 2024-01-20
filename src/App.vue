@@ -2,8 +2,7 @@
   <div id="app">
     <Navbar/>
     <b-container>
-      <LoginUp/>
-
+      <router-view/>
     </b-container>
   </div>
 </template>
@@ -32,6 +31,9 @@ export default {
 body{
   padding: 0;
   margin: 0;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0) !important;
 }
 .container {
   padding: 0 !important;
