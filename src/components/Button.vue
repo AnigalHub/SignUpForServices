@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-button v-if="text === 'Назад'" :style="styles">
+        <b-button v-if="text === 'Назад'" :style="styles" @click="ReturnBack">
             <b-icon icon="arrow-return-left" :style="stylesIcon"></b-icon>
             <span>{{text}}</span>
         </b-button>
@@ -22,6 +22,12 @@
         type: Object,
         default: () => ({}),
       },
+    },
+    methods: {
+      ReturnBack(){
+        return this.$router.go(-1)
+      }
+
     }
   }
 </script>

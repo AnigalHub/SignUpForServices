@@ -17,9 +17,10 @@
     font-family: 'Miltonian Tattoo', serif;
     .short_name{
         margin-top: -5px;
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
     .long_name{
+        font-size: 1rem;
         margin-top: -10px;
     }
 }

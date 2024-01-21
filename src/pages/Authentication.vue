@@ -3,7 +3,7 @@
         <h3>Войдите или Зарегистрируйтесь  </h3>
         <h5>Добро пожаловать в <span>Client & Specialist:</span></h5>
         <div class="buttons">
-            <Button :styles="styles.button_styles" text="Войти"/>
+            <Button :styles="styles.button_styles" href="LoginUp" text="Войти"/>
             <Button :styles="styles.button_styles" text="Регистрация"/>
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
         </div>
