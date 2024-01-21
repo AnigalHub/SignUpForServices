@@ -2,7 +2,7 @@
     <b-navbar class="navbar-expand-lg sticky-top" toggleable>
         <b-container>
             <b-navbar-brand to="/">
-                <logo />
+                <logo/>
             </b-navbar-brand>
             <b-navbar-toggle target="navbar-toggle-collapse">
                 <template v-slot:default="{ expanded }">
@@ -13,15 +13,16 @@
             <b-collapse id="navbar-toggle-collapse" class="justify-content-center" is-nav>
                 <b-navbar-nav>
                     <b-nav-item  class="menu" v-for="(list,index) in information.client_menu" to="" :key="index">{{list}}</b-nav-item>
+<!--                    <b-nav-item  class="menu" v-for="(list,index) in information.specialist_menu" to="" :key="index">{{list}}</b-nav-item>-->
                 </b-navbar-nav>
-                <b-icon icon="person" class="icon_person" width="30" height="30"></b-icon>
             </b-collapse>
+            <b-icon icon="person" class="icon_person" width="30" height="30"></b-icon>
         </b-container>
     </b-navbar>
 </template>
 
 <script>
-  import logo from '@/components/logo'
+  import logo from '@/components/Logo'
   import information from '../../public/information.json'
   export default {
     name: 'Navbar',
