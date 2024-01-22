@@ -1,7 +1,7 @@
 <template>
     <div class="authentication">
         <h3>Войдите или Зарегистрируйтесь  </h3>
-        <h5>Добро пожаловать в <span>Client & Specialist:</span></h5>
+        <h5 class="phrase">Добро пожаловать в <span>Client & Specialist:</span></h5>
         <div class="buttons">
             <Button :styles="styles.button_styles" href="LoginUp" text="Войти"/>
             <Button :styles="styles.button_styles" text="Регистрация"/>
@@ -25,5 +25,7 @@
 </script>
 
 <style scoped>
-
+    .phrase{
+        margin-bottom: 1.5rem
+    }
 </style>

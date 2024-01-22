@@ -1,5 +1,5 @@
 <template>
-    <b-navbar class="navbar-expand-xl sticky-top " toggleable>
+    <b-navbar class="navbar-expand-lg sticky-top" toggleable>
         <b-container>
             <b-navbar-brand to="/">
                 <logo />
@@ -14,8 +14,8 @@
                 <b-navbar-nav>
                     <b-nav-item  class="menu" v-for="(list,index) in information.client_menu" to="" :key="index">{{list}}</b-nav-item>
                 </b-navbar-nav>
+                <b-icon icon="person" class="icon_person" width="30" height="30"></b-icon>
             </b-collapse>
-            <b-icon icon="person" width="30" height="30"></b-icon>
         </b-container>
     </b-navbar>
 </template>
@@ -37,23 +37,19 @@
 <style scoped lang="scss">
 .navbar{
     height: 50px;
+    padding: 0 40px;
     background: white;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    .person_icon{
-        width: 24px;
-        height: 24px;
-    }
     .menu{
         display: flex;
-        font-size: 1.2rem;
-        //font-family: 'Ingrid Darling', cursive;
-        div{
-            letter-spacing: -.5px;
-            margin: 0 15px;
-        }
+        font-size: 1.1rem;
+        margin: 0 10px !important;
     }
     .no_logo{
         margin: 0 auto;
+    }
+    .icon_person{
+        margin-left: 45px;
     }
 }
 </style>
