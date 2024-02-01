@@ -9,4 +9,9 @@ export default[
     name: 'LoginUp',
     component: () => import("../pages/LoginUp")
   },
+  {
+    path: '/Registration',
+    name: 'Registration',
+    component: () => import("../pages/Registration")
+  },
 ]
