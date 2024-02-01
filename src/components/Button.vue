@@ -40,7 +40,7 @@
         width: 100%;
         height: 50px;
         font-family: 'Ingrid Darling', cursive;
-        margin-bottom: 20px;
+        margin-bottom: .5rem;
         font-size: 1.1rem;
     }
 </style>

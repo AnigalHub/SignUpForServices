@@ -4,7 +4,7 @@
         <h5 class="phrase">Добро пожаловать в <span>Client & Specialist:</span></h5>
         <div class="buttons">
             <Button :styles="styles.button_styles" href="LoginUp" text="Войти"/>
-            <Button :styles="styles.button_styles" text="Регистрация"/>
+            <Button :styles="styles.button_styles" href="Registration" text="Регистрация"/>
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
         </div>
     </div>
