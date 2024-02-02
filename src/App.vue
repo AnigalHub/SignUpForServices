@@ -53,5 +53,18 @@ export default {
   .buttons{
     margin: 0 220px;
   }
-
+  /*контейнер, который включает в себя повтор блоков*/
+  .flex-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    & > div {
+      justify-self: stretch;
+      &:first-child{
+        margin-right: 1%;
+      }
+    }
+  }
 </style>
