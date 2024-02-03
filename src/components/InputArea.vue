@@ -1,9 +1,15 @@
 <template>
-    <div class="inputArea flex-container">
+    <div class="inputArea grid-container">
         <div v-for="(value,index) in loginUp">
             <div class="input">
                 <label :for="value.label"> {{value.label}}:</label>
-                <b-form-input :id="value.label"></b-form-input>
+                {{value.mask}}
+                <b-form-input autocomplete="off"
+                              :placeholder="value.placeholder"
+                              :id="value.label"
+                              :type="value.type"
+                              v-mask="value.mask">
+                </b-form-input>
             </div>
         </div>
     </div>

@@ -54,7 +54,7 @@ export default {
     margin: 0 220px;
   }
   /*контейнер, который включает в себя повтор блоков*/
-  .flex-container{
+  .grid-container{
     max-width: 1200px;
     margin: 0 auto;
     display: grid;

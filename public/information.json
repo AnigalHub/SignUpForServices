@@ -15,29 +15,43 @@
   ],
   "login_up": [
     {
-      "label": "Логин"
+      "label": "Логин",
+      "type": "text",
+      "placeholder": "Введите логин"
     },
     {
-      "label": "Пароль"
+      "label": "Пароль",
+      "placeholder": "Введите пароль"
     }
   ],
   "fio": [
     {
-      "label": "Фамилия"
+      "label": "Фамилия",
+      "type": "text",
+      "placeholder": "Введите фамилию"
     },
     {
-      "label": "Имя"
+      "label": "Имя",
+      "type": "text",
+      "placeholder": "Введите имя"
     },
     {
-      "label": "Отчество"
+      "label": "Отчество",
+      "type": "text",
+      "placeholder": "Введите отчество"
     }
   ],
   "other_data": [
     {
-      "label": "Телефон"
+      "label": "Телефон",
+      "mask": "'+7 (###) ###-##-##'",
+      "type": "tel",
+      "placeholder": "Введите телефон"
     },
     {
-      "label": "Адрес"
+      "label": "Адрес",
+      "type": "text",
+      "placeholder": "Введите адрес"
     }
   ]
 }
