@@ -56,10 +56,10 @@ export default {
   /*контейнер, который включает в себя повтор блоков*/
   .grid-container{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     & > div {
       justify-self: stretch;
       &:first-child{

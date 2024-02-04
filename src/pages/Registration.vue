@@ -17,7 +17,7 @@
 <script>
   import Button from '@/components/Button'
   import styles from '../../public/styles.json'
-  import InputArea from '@/components/InputArea'
+  import InputArea from '@/components/FormArea'
   import information from '../../public/information.json'
 
   export default {
@@ -28,6 +28,11 @@
         styles: styles,
         information: information,
       }
+    },
+    methods: {
+      onFileChanged (file) {
+        this.value.img = file
+      },
     }
   }
 </script>

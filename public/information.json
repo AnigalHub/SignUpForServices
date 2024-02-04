@@ -21,7 +21,8 @@
     },
     {
       "label": "Пароль",
-      "placeholder": "Введите пароль"
+      "placeholder": "Введите пароль",
+      "type": "password"
     }
   ],
   "fio": [
