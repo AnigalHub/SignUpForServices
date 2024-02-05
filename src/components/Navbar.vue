@@ -12,8 +12,8 @@
             </b-navbar-toggle>
             <b-collapse id="navbar-toggle-collapse" class="justify-content-center" is-nav>
                 <b-navbar-nav>
-                    <b-nav-item  class="menu" v-for="(list,index) in information.client_menu" to="" :key="index">{{list}}</b-nav-item>
-<!--                    <b-nav-item  class="menu" v-for="(list,index) in information.specialist_menu" to="" :key="index">{{list}}</b-nav-item>-->
+                    <b-nav-item  class="menu" v-for="(list,index) in information.client_menu"  :href="list.href" :key="index">{{list.name}}</b-nav-item>
+<!--                    <b-nav-item  class="menu" v-for="(list,index) in information.specialist_menu" to="" :key="index">{{list.name}}</b-nav-item>-->
                 </b-navbar-nav>
             </b-collapse>
             <b-icon icon="person" class="icon_person" width="30" height="30"></b-icon>
