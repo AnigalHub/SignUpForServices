@@ -2,7 +2,7 @@
     <div class="loginUp">
         <h3>Вход</h3>
         <h5>Логин и пароль</h5>
-        <FormArea :loginUp="information.login_up"/>
+        <FormArea :data="information.login_up"/>
         <div class="buttons">
             <Button :styles="styles.button_styles" text="Войти"/>
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>

@@ -2,11 +2,11 @@
     <div class="loginUp">
         <h3>Регистрация</h3>
         <h5>Логин и пароль</h5>
-        <InputArea :loginUp="information.login_up"/>
+        <InputArea :data="information.login_up"/>
         <h5>ФИО</h5>
-        <InputArea :loginUp="information.fio"/>
+        <InputArea name="registration" :data="information.fio"/>
         <h5>Другие данные</h5>
-        <InputArea :loginUp="information.other_data"/>
+        <InputArea :data="information.other_data"/>
         <div class="buttons">
             <Button :styles="styles.button_styles" text="Сохранить"/>
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
@@ -29,11 +29,6 @@
         information: information,
       }
     },
-    methods: {
-      onFileChanged (file) {
-        this.value.img = file
-      },
-    }
   }
 </script>
 
