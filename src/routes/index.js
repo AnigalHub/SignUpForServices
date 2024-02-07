@@ -14,4 +14,9 @@ export default[
     name: 'Registration',
     component: () => import("../pages/Registration")
   },
+  {
+    path: '/SearchSpecialist',
+    name: 'SearchSpecialist',
+    component: () => import("../pages/client/SearchSpecialist")
+  },
 ]
