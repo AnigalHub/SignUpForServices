@@ -1,8 +1,7 @@
 <template>
-    <div class="searchSpecialist">
-        <h3>Поиск специалиста</h3>
-        <FormArea name="search" :data="information.search"/>
-        <PersonCard name="searchSpecialist" :data="informationDatabase.specialists"/>
+    <div class="myEntries">
+        <h3>Мои специалисты</h3>
+        <PersonCard name="myEntries" :data="informationDatabase.specialists"/>
         <div class="buttons">
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
         </div>
@@ -18,7 +17,7 @@
   import PersonCard from '@/components/PersonCard'
 
   export default {
-    name: 'SearchSpecialist',
+    name: 'MyEntries',
     components: { PersonCard, FormArea, Button },
     data(){
       return{
