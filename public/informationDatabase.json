@@ -2,11 +2,21 @@
   "specialists":[
     {
       "id": "1",
-      "src": "",
+      "src": "./img.jpg",
       "alt": "",
       "name": "Кристина",
       "surname": "Гордеева",
       "patronymic": "",
+      "loyalty": [
+        {
+          "number_services": "5",
+          "discount": "10%"
+        },
+        {
+          "number_services": "10",
+          "discount": "20%"
+        }
+      ],
       "category": [
         "Маникюр",
         "Перманент",
@@ -14,15 +24,106 @@
       ],
       "address": "ул.Сахалинская 6к1 кв 192, домофон 2425, этаж 4",
       "date": "24.01.23"
+    },
+    {
+      "id": "2",
+      "src": "./img2.jpg",
+      "alt": "",
+      "name": "Александр",
+      "surname": "Абрамов",
+      "patronymic": "",
+      "loyalty": [
+        {
+          "number_services": "1",
+          "discount": "100%"
+        }
+      ],
+      "category": [
+        "Фитнес тренер",
+        "Спорт"
+      ],
+      "address": "LessFitness, Щелковское ш. 100, стр. 10",
+      "date": "13.12.23"
+    },
+    {
+      "id": "3",
+      "src": "./img3.jpg",
+      "alt": "",
+      "name": "Кристина",
+      "surname": "Гордеева",
+      "patronymic": "",
+      "category": [
+        "Фельдшер",
+        "Скорая помощь"
+      ],
+      "address": "г.Москва, м. Преображенская площадь",
+      "date": "25.01.23"
+    }
+  ],
+  "my_specialists": [
+    {
+      "id": "1",
+      "src": "./img.jpg",
+      "alt": "",
+      "name": "Кристина",
+      "surname": "Гордеева",
+      "patronymic": "",
+      "loyalty": [
+        {
+          "number_services": "5",
+          "discount": "10%"
+        },
+        {
+          "number_services": "10",
+          "discount": "20%"
+        }
+      ],
+      "category": [
+        "Маникюр",
+        "Перманент",
+        "Брови"
+      ],
+      "address": "ул.Сахалинская 6к1 кв 192, домофон 2425, этаж 4",
+      "date": "24.01.23"
+    },
+    {
+      "id": "2",
+      "src": "./img2.jpg",
+      "alt": "",
+      "name": "Александр",
+      "surname": "Абрамов",
+      "patronymic": "",
+      "loyalty": [
+        {
+          "number_services": "1",
+          "discount": "100%"
+        }
+      ],
+      "category": [
+        "Фитнес тренер",
+        "Спорт"
+      ],
+      "address": "LessFitness, Щелковское ш. 100, стр. 10",
+      "date": "13.12.23"
     }
   ],
   "entries": [
     {
-      "id": "",
-      "id_client": "",
+      "id": "11",
+      "id_client": "22",
       "id_specialist": "1",
       "time": "15:00",
       "date": "15 января (пн)"
+    },
+    {
+      "id": "12",
+      "id_client": "22",
+      "id_specialist": "2",
+      "time": "19:00",
+      "date": "16 января (вт)"
     }
+  ],
+  "cards": [
+
   ]
 }
