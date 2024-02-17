@@ -15,8 +15,9 @@
                     <b-nav-item  class="menu" v-for="(list,index) in information.client_menu"  :href="list.href" :key="index">{{list.name}}</b-nav-item>
 <!--                    <b-nav-item  class="menu" v-for="(list,index) in information.specialist_menu" to="" :key="index">{{list.name}}</b-nav-item>-->
                 </b-navbar-nav>
+                <b-icon class="icon_person" icon="person"  width="30" height="30"></b-icon>
             </b-collapse>
-            <b-icon icon="person" class="icon_person" width="30" height="30"></b-icon>
+
         </b-container>
     </b-navbar>
 </template>
@@ -44,13 +45,18 @@
     .menu{
         display: flex;
         font-size: 1.1rem;
-        margin: 0 10px !important;
+        margin: 0 10px;
     }
     .no_logo{
         margin: 0 auto;
     }
     .icon_person{
         margin-left: 45px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .navbar .menu{
+        font-size: 1rem;
     }
 }
 </style>

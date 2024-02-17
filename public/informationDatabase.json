@@ -9,11 +9,11 @@
       "patronymic": "",
       "loyalty": [
         {
-          "number_services": "5",
+          "number_services": 5,
           "discount": "10%"
         },
         {
-          "number_services": "10",
+          "number_services": 5,
           "discount": "20%"
         }
       ],
@@ -34,7 +34,7 @@
       "patronymic": "",
       "loyalty": [
         {
-          "number_services": "1",
+          "number_services": 1,
           "discount": "100%"
         }
       ],
@@ -70,11 +70,11 @@
       "patronymic": "",
       "loyalty": [
         {
-          "number_services": "5",
+          "number_services": 5,
           "discount": "10%"
         },
         {
-          "number_services": "10",
+          "number_services": 5,
           "discount": "20%"
         }
       ],
@@ -95,7 +95,7 @@
       "patronymic": "",
       "loyalty": [
         {
-          "number_services": "1",
+          "number_services": 1,
           "discount": "100%"
         }
       ],

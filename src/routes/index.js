@@ -24,4 +24,14 @@ export default[
     name: 'MySpecialists',
     component: () => import("../pages/client/MySpecialists")
   },
+  {
+    path: '/MyEntries',
+    name: 'MyEntries',
+    component: () => import("../pages/client/MyEntries")
+  },
+  {
+    path: '/MyCards',
+    name: 'MyCards',
+    component: () => import("../pages/client/MyCards")
+  },
 ]
