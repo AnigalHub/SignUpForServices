@@ -17,6 +17,10 @@
                     <Button :styles="styles.button_styles" href="" text="Записаться"/>
                     <Button :styles="styles.button_styles" href="" text="Портфолио"/>
                 </b-col>
+                <b-col v-if="name === 'worksSpecialists'"  cols="3">
+                    <Button :styles="styles.button_styles" href="" text="Все работы"/>
+                    <Button :styles="styles.button_styles" href="" text="Мои работы"/>
+                </b-col>
                 <b-col v-if="name === 'myEntries'" cols="3">
                     <p class="time">{{value.time}}</p>
                     <p class="date">{{value.date}}</p>
@@ -24,7 +28,7 @@
                 </b-col>
                 <b-col cols="1">
                     <i v-if="name === 'searchSpecialist' || name === 'myEntries'" class="bi bi-heart"></i>
-                    <i v-if="name === 'mySpecialists' || name === 'myCards'" class="bi bi-heart-fill"></i>
+                    <i v-if="name === 'mySpecialists' || name === 'myCards' || name === 'worksSpecialists'" class="bi bi-heart-fill"></i>
                 </b-col>
             </b-row>
             <div v-if="name === 'myCards' && value.loyalty.length">

@@ -67,4 +67,7 @@ export default {
       }
     }
   }
+  i:before{
+    font-size: 1.8rem;
+  }
 </style>

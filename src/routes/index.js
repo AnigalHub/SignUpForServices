@@ -34,4 +34,9 @@ export default[
     name: 'MyCards',
     component: () => import("../pages/client/MyCards")
   },
+  {
+    path: '/WorksSpecialists',
+    name: 'WorksSpecialists',
+    component: () => import("../pages/client/WorksSpecialists")
+  },
 ]
