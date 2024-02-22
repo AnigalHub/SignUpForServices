@@ -1,6 +1,6 @@
 <template>
     <div class="worksSpecialists">
-        <h3>Мои специалисты</h3>
+        <h3>Работы мастеров</h3>
         <PersonCard name="worksSpecialists" :data="informationDatabase.my_specialists"/>
         <div class="buttons">
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
