@@ -15,9 +15,9 @@
                     <b-nav-item  class="menu" v-for="(list,index) in information.client_menu"  :href="list.href" :key="index">{{list.name}}</b-nav-item>
 <!--                    <b-nav-item  class="menu" v-for="(list,index) in information.specialist_menu" to="" :key="index">{{list.name}}</b-nav-item>-->
                 </b-navbar-nav>
-                <b-icon class="icon_person" icon="person"  width="30" height="30"></b-icon>
+                <b-icon class="icon_person" icon="person"  width="30" height="30" @click="onIconClick"></b-icon>
             </b-collapse>
-
+            <client-card v-if="isShown" :isShown="isShown" class="desktop"/>
         </b-container>
     </b-navbar>
 </template>
@@ -25,18 +25,38 @@
 <script>
   import logo from '@/components/Logo'
   import information from '../../public/information.json'
+  import ClientCard from '@/components/ClientCard'
+
   export default {
     name: 'Navbar',
-    components: { logo },
+    components: { ClientCard, logo },
     data(){
       return{
         information: information,
+        isShown: false,
       }
+    },
+    methods:{
+      onIconClick() {
+          this.isShown = !this.isShown;
+      },
     }
   }
 </script>
 
 <style scoped lang="scss">
+    .desktop {
+        background-color: white;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        width: 300px;
+        height: 160px;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 20px 0 0 270px;
+    }
 .navbar{
     height: 50px;
     padding: 0 40px;
