@@ -43,6 +43,20 @@
       "href": ""
     }
   ],
+  "client_card": [
+    {
+      "name": "Управление профилем",
+      "href": "SettingsProfile"
+    },
+    {
+      "name": "Настройка интерфейса",
+      "href": "SettingsInterface"
+    },
+    {
+      "name": "Выход",
+      "href": "LoginUp"
+    }
+  ],
   "login_up": [
     {
       "label": "Логин",
