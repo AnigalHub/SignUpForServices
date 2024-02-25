@@ -166,10 +166,10 @@
       "id_client": "22",
       "name": "Anna",
       "surname": "Ignatova",
-      "patronymic": "",
+      "patronymic": " ",
       "login": "Anigal",
       "password": "********",
-      "telephone": "8(903)-151-39-31",
+      "telephone": "903-151-39-31",
       "address": "ул.Уссурийская д1к4 кв 56",
       "clientCategory": "client"
     }

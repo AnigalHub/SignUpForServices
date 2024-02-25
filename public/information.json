@@ -60,11 +60,13 @@
   "login_up": [
     {
       "label": "Логин",
+      "name": "login",
       "type": "text",
       "placeholder": "Введите логин"
     },
     {
       "label": "Пароль",
+      "name": "password",
       "placeholder": "Введите пароль",
       "type": "password"
     }
@@ -72,16 +74,19 @@
   "fio": [
     {
       "label": "Фамилия",
+      "name": "surname",
       "type": "text",
       "placeholder": "Введите фамилию"
     },
     {
       "label": "Имя",
+      "name": "name",
       "type": "text",
       "placeholder": "Введите имя"
     },
     {
       "label": "Отчество",
+      "name": "patronymic",
       "type": "text",
       "placeholder": "Введите отчество"
     }
@@ -95,12 +100,14 @@
   "other_data": [
     {
       "label": "Телефон",
-      "mask": "'+7 (###) ###-##-##'",
+      "mask": "+7 (###) ###-##-##",
+      "name": "telephone",
       "type": "tel",
       "placeholder": "Введите телефон"
     },
     {
       "label": "Адрес",
+      "name": "address",
       "type": "text",
       "placeholder": "Введите адрес"
     }
