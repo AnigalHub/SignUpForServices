@@ -1,6 +1,8 @@
 <template>
     <div>
         <b-nav-item  class="menu" v-for="(list,index) in data"  :href="list.href" :key="index">
+
+            <b-icon v-if="list.name === 'Выход'" icon="box-arrow-in-right"></b-icon>
             {{list.name}}
         </b-nav-item>
     </div>

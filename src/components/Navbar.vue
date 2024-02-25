@@ -17,7 +17,7 @@
                 </b-navbar-nav>
                 <b-icon class="icon_person" icon="person"  width="30" height="30" @click="onIconClick"></b-icon>
             </b-collapse>
-            <client-card v-if="isShown" :isShown="isShown" class="desktop"/>
+            <client-card v-if="isShown" :isShown="isShown" :data="information.client_card" class="desktop"/>
         </b-container>
     </b-navbar>
 </template>
