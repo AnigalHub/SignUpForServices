@@ -17,26 +17,46 @@ export default[
   {
     path: '/SearchSpecialist',
     name: 'SearchSpecialist',
-    component: () => import("../pages/client/SearchSpecialist")
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'SearchSpecialist',
+      title:'Поиск специалиста'
+    }
   },
   {
     path: '/MySpecialists',
     name: 'MySpecialists',
-    component: () => import("../pages/client/MySpecialists")
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'MySpecialists',
+      title:'Мои специалисты'
+    }
   },
   {
     path: '/MyEntries',
     name: 'MyEntries',
-    component: () => import("../pages/client/MyEntries")
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'MyEntries',
+      title:'Мои записи'
+    }
   },
   {
     path: '/MyCards',
     name: 'MyCards',
-    component: () => import("../pages/client/MyCards")
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'MyCards',
+      title:'Карты лояльности'
+    }
   },
   {
     path: '/WorksSpecialists',
     name: 'WorksSpecialists',
-    component: () => import("../pages/client/WorksSpecialists")
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'WorksSpecialists',
+      title:'Работы мастеров'
+    }
   },
 ]
