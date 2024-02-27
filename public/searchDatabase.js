@@ -1,11 +1,11 @@
-export const searchEntries = (array1,array2) => {
+export const searchEntries = (id_client, array1,array2) => {
   let array = []
 
   array1.forEach((obj1) => {
     array2.forEach((obj2) => {
       let obj = {};
 
-      if (obj2['id_client'] === '22' && obj1['id'] === obj2['id_specialist']) {
+      if (obj2['id_client'] === id_client && obj1['id'] === obj2['id_specialist']) {
 
         obj = Object.assign(obj, obj1);
         obj['date'] = obj2['date'];
@@ -19,6 +19,17 @@ export const searchEntries = (array1,array2) => {
   })
  return array;
 
+}
+export const searchClient = (id, array) => {
+  let newObj = {};
+  array.forEach((obj) => {
+    console.log('obj', obj, id)
+    if(obj['id_client'] === id){
+      console.log('OBJ', obj)
+      newObj = obj;
+    }
+  })
+  return newObj;
 }
 
 
