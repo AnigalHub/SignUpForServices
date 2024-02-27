@@ -38,7 +38,7 @@
          return  this.informationDatabase.my_specialists
         }
         if(this.name === 'MyEntries'){
-          return searchEntries(informationDatabase.specialists,informationDatabase.entries)
+          return searchEntries('22',informationDatabase.specialists,informationDatabase.entries)
         }
         if(this.name === 'MyCards' || this.name === 'WorksSpecialists'){
           return this.informationDatabase.my_specialists

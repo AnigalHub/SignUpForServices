@@ -161,6 +161,19 @@
       "date": "13.12.23"
     }
   ],
+  "clients": [
+    {
+      "id_client": "22",
+      "name": "Anna",
+      "surname": "Ignatova",
+      "patronymic": "",
+      "login": "Anigal",
+      "password": "********",
+      "telephone": "8(903)-151-39-31",
+      "address": "ул.Уссурийская д1к4 кв 56",
+      "clientCategory": "client"
+    }
+  ],
   "entries": [
     {
       "id": "11",
@@ -174,6 +187,13 @@
       "id_client": "22",
       "id_specialist": "2",
       "time": "19:00",
+      "date": "16 января (вт)"
+    },
+    {
+      "id": "13",
+      "id_client": "23",
+      "id_specialist": "2",
+      "time": "20:00",
       "date": "16 января (вт)"
     }
   ]

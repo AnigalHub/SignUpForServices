@@ -47,7 +47,7 @@
 <style scoped lang="scss">
     .desktop {
         background-color: white;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
         border-radius: 8px;
         width: 300px;
         height: 160px;
@@ -55,7 +55,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: 20px 0 0 270px;
+        margin: 20px 0 0 185px;
     }
 .navbar{
     height: 50px;
@@ -72,11 +72,18 @@
     }
     .icon_person{
         margin-left: 45px;
+        cursor: pointer;
     }
 }
-@media screen and (max-width: 1200px){
-    .navbar .menu{
-        font-size: 1rem;
+    @media screen and (min-width: 992px){
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 0.05rem !important;
+            padding-left: 0.05rem !important;
+        }
     }
-}
+    @media screen and (max-width: 1200px){
+        .navbar .menu{
+            font-size: 1rem;
+        }
+    }
 </style>
