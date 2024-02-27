@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="(value,index) in data">
-            <b-row :class="name === 'myCards' ? 'cardPerson' : 'personCard'">
+            <b-row :class="name === 'MyCards' ? 'cardPerson' : 'personCard'">
                 <b-col cols="2">
                     <img :src="value.src" class="img_specialist">
                 </b-col>
@@ -13,25 +13,25 @@
                     <p>На сайте с {{value.date}}</p>
                     <p>{{value.address}}</p>
                 </b-col>
-                <b-col v-if="name === 'searchSpecialist' || name === 'mySpecialists'"  cols="3">
+                <b-col v-if="name === 'SearchSpecialist' || name === 'MySpecialists'"  cols="3">
                     <Button :styles="styles.button_styles" href="" text="Записаться"/>
                     <Button :styles="styles.button_styles" href="" text="Портфолио"/>
                 </b-col>
-                <b-col v-if="name === 'worksSpecialists'"  cols="3">
+                <b-col v-if="name === 'WorksSpecialists'"  cols="3">
                     <Button :styles="styles.button_styles" href="" text="Все работы"/>
                     <Button :styles="styles.button_styles" href="" text="Мои работы"/>
                 </b-col>
-                <b-col v-if="name === 'myEntries'" cols="3">
+                <b-col v-if="name === 'MyEntries'" cols="3">
                     <p class="time">{{value.time}}</p>
                     <p class="date">{{value.date}}</p>
                     <Button :styles="styles.button_styles" href="" text="Перенести запись"/>
                 </b-col>
                 <b-col cols="1">
-                    <i v-if="name === 'searchSpecialist' || name === 'myEntries'" class="bi bi-heart"></i>
-                    <i v-if="name === 'mySpecialists' || name === 'myCards' || name === 'worksSpecialists'" class="bi bi-heart-fill"></i>
+                    <i v-if="name === 'SearchSpecialist' || name === 'MyEntries'" class="bi bi-heart"></i>
+                    <i v-if="name === 'MySpecialists' || name === 'MyCards' || name === 'WorksSpecialists'" class="bi bi-heart-fill"></i>
                 </b-col>
             </b-row>
-            <div v-if="name === 'myCards' && value.loyalty.length">
+            <div v-if="name === 'MyCards' && value.loyalty.length">
                 <Loyalty :data="value.loyalty"/>
             </div>
         </div>
@@ -55,7 +55,7 @@
       return{
         styles: styles,
       }
-    }
+    },
   }
 </script>
 

@@ -1,25 +1,8 @@
 <template>
     <div>
         <h3>{{title}}</h3>
-        <div v-if="name === 'SearchSpecialist'">
-            <FormArea name="search" :data="information.search"/>
-            <PersonCard name="searchSpecialist" :data="informationDatabase.specialists"/>
-        </div>
-        <div v-if="name === 'MySpecialists'">
-            <PersonCard name="mySpecialists" :data="informationDatabase.my_specialists"/>
-        </div>
-        <div v-if="name === 'MyEntries'">
-            <PersonCard name="myEntries" :data="search()"/>
-        </div>
-        <div v-if="name === 'MyCards'">
-            <PersonCard name="myCards" :data="informationDatabase.my_specialists"/>
-        </div>
-        <div v-if="name === 'WorksSpecialists'">
-            <PersonCard name="worksSpecialists" :data="informationDatabase.my_specialists"/>
-        </div>
-        <div class="buttons">
-            <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
-        </div>
+        <FormArea v-if="name === 'SearchSpecialist'" name="search" :data="information.search"/>
+        <PersonCard :name="name" :data="informationPersonCard"/>
     </div>
 </template>
 
@@ -46,9 +29,20 @@
         informationDatabase:informationDatabase
       }
     },
-    methods:{
-      search(){
-        return searchEntries(informationDatabase.specialists,informationDatabase.entries)
+    computed:{
+      informationPersonCard(){
+        if(this.name === 'SearchSpecialist'){
+          return this.informationDatabase.specialists;
+        }
+        if(this.name === 'MySpecialists'){
+         return  this.informationDatabase.my_specialists
+        }
+        if(this.name === 'MyEntries'){
+          return searchEntries(informationDatabase.specialists,informationDatabase.entries)
+        }
+        if(this.name === 'MyCards' || this.name === 'WorksSpecialists'){
+          return this.informationDatabase.my_specialists
+        }
       }
     },
   }
