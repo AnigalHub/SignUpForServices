@@ -1,8 +1,11 @@
 <template>
     <div>
         <h3>{{title}}</h3>
-        <FormArea v-if="name === 'SearchSpecialist'" name="search" :data="information.search"/>
+        <FormArea v-if="name === 'SearchSpecialist'" :name="name" :data="information.search"/>
         <PersonCard :name="name" :data="informationPersonCard"/>
+        <div class="buttons">
+            <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
+        </div>
     </div>
 </template>
 

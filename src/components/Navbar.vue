@@ -79,6 +79,7 @@
         .navbar-expand-lg .navbar-nav .nav-link {
             padding-right: 0.05rem !important;
             padding-left: 0.05rem !important;
+            font-size: .9rem;
         }
     }
     @media screen and (max-width: 1200px){

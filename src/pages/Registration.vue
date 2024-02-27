@@ -4,7 +4,7 @@
         <h5>Логин и пароль</h5>
         <FormArea :data="information.login_up"/>
         <h5>ФИО</h5>
-        <FormArea name="registration" :data="information.fio"/>
+        <FormArea name="Registration" :data="information.fio"/>
         <h5>Другие данные</h5>
         <FormArea :data="information.other_data"/>
         <div class="buttons">

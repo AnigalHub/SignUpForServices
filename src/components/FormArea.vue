@@ -1,6 +1,6 @@
 <template>
-    <div :class="[name === 'search' ? 'searchArea' : 'formArea']">
-        <div v-if="name === 'registration'" class="grid-container">
+    <div :class="[name === 'SearchSpecialist' ? 'searchArea' : 'formArea']">
+        <div v-if="name === 'Registration'" class="grid-container">
             <div class="img">Загрузить изображение</div>
             <div class="recommendations">
                 <h6>Рекомендации:</h6>
@@ -82,7 +82,7 @@
     }
     .form-control{
         border-radius: 0;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.25) ;
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.25) ;
         border-top: none;
         border-left:none;
         border-right: none;
