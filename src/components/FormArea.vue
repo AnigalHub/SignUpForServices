@@ -9,7 +9,7 @@
                 </ul>
             </div>
         </div>
-        <div class="grid-container">
+        <div>
             <div v-for="(value,index) in data">
                 <div >
                     <label v-if="value.label" :for="value.label" :type="value.type"> {{value.label}}:</label>
@@ -63,6 +63,9 @@
     .input{
         display: flex;
     }
+    label{
+        margin-bottom: -0.05rem;
+    }
     .searchArea{
         background: white;
         border-radius: 50px;
@@ -83,6 +86,8 @@
         border-top: none;
         border-left:none;
         border-right: none;
+        padding: 0.375rem 0.15rem;;
+        margin-bottom: 1rem;
     }
     .recommendations,.img{
         background: #f5f5f5;

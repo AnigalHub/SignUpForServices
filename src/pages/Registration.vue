@@ -2,11 +2,11 @@
     <div class="loginUp">
         <h3>Регистрация</h3>
         <h5>Логин и пароль</h5>
-        <InputArea :data="information.login_up"/>
+        <FormArea :data="information.login_up"/>
         <h5>ФИО</h5>
-        <InputArea name="registration" :data="information.fio"/>
+        <FormArea name="registration" :data="information.fio"/>
         <h5>Другие данные</h5>
-        <InputArea :data="information.other_data"/>
+        <FormArea :data="information.other_data"/>
         <div class="buttons">
             <Button :styles="styles.button_styles" text="Сохранить"/>
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
@@ -17,12 +17,12 @@
 <script>
   import Button from '@/components/Button'
   import styles from '../../public/styles.json'
-  import InputArea from '@/components/FormArea'
+  import FormArea from '@/components/FormArea'
   import information from '../../public/information.json'
 
   export default {
     name: 'Registration',
-    components: { InputArea, Button },
+    components: { FormArea, Button },
     data(){
       return{
         styles: styles,
