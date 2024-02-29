@@ -59,4 +59,13 @@ export default[
       title:'Работы мастеров'
     }
   },
+  {
+    path: '/SettingsProfile',
+    name: 'SettingsProfile',
+    component: () => import("../pages/SettingsProfile"),
+    props:{
+      name:'SettingsProfile',
+      title:'Личные данные'
+    }
+  },
 ]
