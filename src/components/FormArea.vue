@@ -10,10 +10,9 @@
             </div>
         </div>
         <div>
-            <div v-for="(value,index) in data">
+            <div v-for="(value,index) in pushArray">
                 <div >
                     <label v-if="value.label" :for="value.label" :type="value.type"> {{value.label}}:</label>
-
                     <div class="input">
                         <div class="icon" v-if="name === 'search'">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -25,6 +24,7 @@
                                       :id="value.label"
                                       :type="value.type"
                                       v-mask="value.mask"
+                                      v-model="value.value"
                         >
                         </b-form-input>
                     </div>
@@ -42,9 +42,11 @@
     props:{
       name: String,
       data: Array,
+      dataBase: Object,
     },
     data(){
       return{
+        array:[],
         recommendations:[
           'На фото изображены вы;',
           'Размер фото не меньше 100х200 пикселей;',
@@ -52,6 +54,27 @@
         ]
       }
     },
+    computed:{
+        pushArray(){
+          this.array = Object.assign([], this.data);
+
+          if(this.dataBase){
+            this.array.forEach((el) =>{
+              for (let key in this.dataBase) {
+                if(el.name === key){
+                  el.value = this.dataBase[key]
+                }
+              }
+            })
+          }
+          else{
+            this.array.forEach((el) =>{
+                  el.value = ''
+            })
+          }
+          return this.array
+        }
+    }
   }
 </script>
 
