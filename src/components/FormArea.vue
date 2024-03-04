@@ -1,17 +1,21 @@
 <template>
     <div :class="[name === 'SearchSpecialist' ? 'searchArea' : 'formArea']">
-        <div v-if="name === 'Registration'" class="grid-container">
+        <div v-if="name === 'Registration'" class="grid-container"  style="float: left;
+             text-align: center;
+             margin-right: 3%;">
             <div class="img">Загрузить изображение</div>
-            <div class="recommendations">
-                <h6>Рекомендации:</h6>
-                <ul>
-                    <li v-for="(value,index) in recommendations">{{value}}</li>
-                </ul>
-            </div>
         </div>
-        <div>
+
+        <div v-if="name === 'SettingsProfile'" class="grid-container"
+             style="float: left;
+             text-align: center;
+             margin-right: 3%;">
+            <div v-if="!dataBase.src" class="img">Загрузить изображение</div>
+            <img v-if="dataBase.src" :src="dataBase.src">
+        </div>
+        <div style="display: grid">
             <div v-for="(value,index) in pushArray">
-                <div >
+                <div>
                     <label v-if="value.label" :for="value.label" :type="value.type"> {{value.label}}:</label>
                     <div class="input">
                         <div class="icon" v-if="name === 'SearchSpecialist'">
@@ -45,11 +49,6 @@
     data(){
       return{
         array:[],
-        recommendations:[
-          'На фото изображены вы;',
-          'Размер фото не меньше 100х200 пикселей;',
-          'Лицо видно полностью.'
-        ]
       }
     },
     computed:{
@@ -77,6 +76,10 @@
 </script>
 
 <style scoped>
+    img{
+        height: 230px;
+        width: 185px;
+    }
     .icon{
         margin-top: 1.25%;
         margin-right: .5%;
@@ -122,6 +125,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 230px;
+        width: 185px;
     }
 
 </style>

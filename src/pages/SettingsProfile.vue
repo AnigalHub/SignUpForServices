@@ -1,11 +1,11 @@
 <template>
     <div>
         <h3>{{title}}</h3>
-        <FormArea  :data="information.fio" :dataBase="informationClient"/>
+        <FormArea  :data="information.fio" :name="name" :dataBase="informationClient"/>
         <h5>Логин и пароль</h5>
-        <FormArea :data="information.login_up" :dataBase="informationClient"/>
+        <FormArea :data="information.login_up"  :dataBase="informationClient"/>
         <h5>Другие данные</h5>
-        <FormArea :data="information.other_data" :dataBase="informationClient"/>
+        <FormArea :data="information.other_data"  :dataBase="informationClient"/>
         <div class="buttons">
             <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
         </div>

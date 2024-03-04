@@ -164,6 +164,8 @@
   "clients": [
     {
       "id_client": "22",
+      "src": "../client.jpg",
+      "alt": "",
       "name": "Анна",
       "surname": "Игнатова",
       "patronymic": " ",
