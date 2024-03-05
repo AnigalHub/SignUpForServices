@@ -1,17 +1,8 @@
 <template>
     <div :class="[name === 'SearchSpecialist' ? 'searchArea' : 'formArea']">
-        <div v-if="name === 'Registration'" class="grid-container"  style="float: left;
-             text-align: center;
-             margin-right: 3%;">
-            <div class="img">Загрузить изображение</div>
-        </div>
-
-        <div v-if="name === 'SettingsProfile'" class="grid-container"
-             style="float: left;
-             text-align: center;
-             margin-right: 3%;">
-            <div v-if="!dataBase.src" class="img">Загрузить изображение</div>
-            <img v-if="dataBase.src" :src="dataBase.src">
+        <div v-if=" name === 'Registration' || name === 'SettingsProfile'" class="grid-container">
+            <div v-if="!dataBase || !dataBase.src" class="img">Загрузить изображение</div>
+            <img v-if="dataBase && dataBase.src" :src="dataBase.src">
         </div>
         <div style="display: grid">
             <div v-for="(value,index) in pushArray">
@@ -127,6 +118,11 @@
         align-items: center;
         height: 230px;
         width: 185px;
+    }
+    .grid-container{
+        float: left;
+        text-align: center;
+        margin-right: 3%;
     }
 
 </style>
