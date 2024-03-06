@@ -111,6 +111,78 @@
       "type": "text",
       "placeholder": "Введите адрес"
     }
+  ],
+  "themes": [
+    {
+      "label": "Цвет фона",
+      "name": "background",
+      "type": "text"
+    },
+    {
+      "label": "Цвет границ кнопок",
+      "name": "borderColorButton",
+      "type": "text"
+    },
+    {
+      "label": "Цвет контента",
+      "name": "backgroundContent",
+      "type": "text"
+    },
+    {
+      "label": "Цвет блоков",
+      "name": "backgroundDiv",
+      "type": "text"
+    },
+    {
+      "label": "Закругленность контента",
+      "name": "borderRadiusContent",
+      "type": "text"
+    },
+    {
+      "label": "Закругленность блоков",
+      "name": "borderRadiusDiv",
+      "type": "text"
+    },
+    {
+      "label": "Цвет границ контента",
+      "name": "borderColorContent",
+      "type": "text"
+    },
+    {
+      "label": "Цвет границ блоков",
+      "name": "borderColorDiv",
+      "type": "text"
+    },
+    {
+      "label": "Цвет заголовков",
+      "name": "colorH",
+      "type": "text"
+    },
+    {
+      "label": "Цвет текста",
+      "name": "colorP",
+      "type": "text"
+    },
+    {
+      "label": "Цвет кнопок",
+      "name": "backgroundButton",
+      "type": "text"
+    },
+    {
+      "label": "Шрифт текста",
+      "name": "fontStylesText",
+      "type": "text"
+    },
+    {
+      "label": "Закругленность кнопок",
+      "name": "borderRadiusButton",
+      "type": "text"
+    },
+    {
+      "label": "Тень",
+      "name": "shadow",
+      "type": "text"
+    }
   ]
 }
 
