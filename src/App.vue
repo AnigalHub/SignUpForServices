@@ -70,4 +70,7 @@ export default {
   i:before{
     font-size: 1.8rem;
   }
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 1%;
+  }
 </style>

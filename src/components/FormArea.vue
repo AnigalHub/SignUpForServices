@@ -4,9 +4,9 @@
             <div v-if="!dataBase || !dataBase.src" class="img">Загрузить изображение</div>
             <img v-if="dataBase && dataBase.src" :src="dataBase.src">
         </div>
-        <div style="display: grid">
+        <div  :style="layoutStyles" style="display: grid">
             <div v-for="(value,index) in pushArray">
-                <div>
+                <div style="margin: 0 10px">
                     <label v-if="value.label" :for="value.label" :type="value.type"> {{value.label}}:</label>
                     <div class="input">
                         <div class="icon" v-if="name === 'SearchSpecialist'">
@@ -36,6 +36,10 @@
       name: String,
       data: Array,
       dataBase: Object,
+      layoutStyles: {
+        type: Object,
+        default: () => ({}),
+      },
     },
     data(){
       return{
