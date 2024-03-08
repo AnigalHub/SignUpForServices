@@ -68,4 +68,13 @@ export default[
       title:'Личные данные'
     }
   },
+  {
+    path: '/SettingsInterface',
+    name: 'SettingsInterface',
+    component: () => import("../pages/SettingsInterface"),
+    props:{
+      name:'SettingsProfile',
+      title:'Настройки'
+    }
+  },
 ]
