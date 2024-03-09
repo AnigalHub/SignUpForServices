@@ -7,13 +7,12 @@
         <h5>Другие данные</h5>
         <FormArea :data="information.other_data"  :dataBase="informationClient"/>
         <div class="buttons">
-            <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
+            <Button class="buttonBackStyles" text="Назад"/>
         </div>
     </div>
 </template>
 
 <script>
-  import styles from '../../public/styles.json'
   import information from '../../public/information.json'
   import FormArea from '@/components/FormArea'
   import Button from '@/components/Button'
@@ -29,7 +28,6 @@
     components: { FormArea, Button },
     data(){
       return{
-        styles: styles,
         information: information,
       }
     },

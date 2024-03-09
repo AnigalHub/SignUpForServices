@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-button v-if="text === 'Назад'" :style="styles" @click="ReturnBack">
-            <b-icon icon="arrow-return-left" :style="stylesIcon"></b-icon>
+            <b-icon icon="arrow-return-left" class="buttonBackIconStyles"></b-icon>
             <span>{{text}}</span>
         </b-button>
         <router-link v-else :to="{name: href}" tag="button" :style="styles">{{text}}</router-link>

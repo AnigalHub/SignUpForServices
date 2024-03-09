@@ -23,8 +23,10 @@ export default {
 </script>
 
 <style lang="scss">
+  @import './../public/style.css';
+
   #app {
-    background: #F3F3F4;
+    background: var(--background);
     min-height: 100vh;
     padding: 0;
   }
@@ -72,5 +74,21 @@ export default {
   }
   input[type="radio"], input[type="checkbox"] {
     margin-right: 1%;
+  }
+  .buttonBackStyles button{
+    border-radius: var(--borderRadiusButton);
+    background: var(--backgroundButtonBack);
+    color: var(--colorButtonBack);
+    margin-top: .5rem;
+    text-align: left;
+  }
+  .buttonBackIconStyles{
+    fill: #ffffff
+  }
+  .buttonStyles button{
+    border-radius: var(--borderRadiusButton);
+    border: 1.8px solid var(--borderColorButton);
+    background: white;
+    color: black
   }
 </style>

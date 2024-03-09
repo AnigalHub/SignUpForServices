@@ -14,17 +14,17 @@
                     <p>{{value.address}}</p>
                 </b-col>
                 <b-col v-if="name === 'SearchSpecialist' || name === 'MySpecialists'"  cols="3">
-                    <Button :styles="styles.button_styles" href="" text="Записаться"/>
-                    <Button :styles="styles.button_styles" href="" text="Портфолио"/>
+                    <Button class="buttonStyles" href="" text="Записаться"/>
+                    <Button class="buttonStyles" href="" text="Портфолио"/>
                 </b-col>
                 <b-col v-if="name === 'WorksSpecialists'"  cols="3">
-                    <Button :styles="styles.button_styles" href="" text="Все работы"/>
-                    <Button :styles="styles.button_styles" href="" text="Мои работы"/>
+                    <Button class="buttonStyles" href="" text="Все работы"/>
+                    <Button class="buttonStyles" href="" text="Мои работы"/>
                 </b-col>
                 <b-col v-if="name === 'MyEntries'" cols="3">
                     <p class="time">{{value.time}}</p>
                     <p class="date">{{value.date}}</p>
-                    <Button :styles="styles.button_styles" href="" text="Перенести запись"/>
+                    <Button class="buttonStyles" href="" text="Перенести запись"/>
                 </b-col>
                 <b-col cols="1">
                     <i v-if="name === 'SearchSpecialist' || name === 'MyEntries'" class="bi bi-heart"></i>
@@ -36,11 +36,9 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
-  import styles from '../../public/styles.json'
   import Button from '@/components/Button'
   import Loyalty from '@/components/Loyalty'
 
@@ -50,11 +48,6 @@
     props:{
       name: String,
       data: Array,
-    },
-    data(){
-      return{
-        styles: styles,
-      }
     },
   }
 </script>

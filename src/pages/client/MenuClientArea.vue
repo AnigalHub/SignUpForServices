@@ -4,7 +4,7 @@
         <FormArea v-if="name === 'SearchSpecialist'" :name="name" :data="information.search"/>
         <PersonCard :name="name" :data="informationPersonCard"/>
         <div class="buttons">
-            <Button :styles="styles.button_back_styles" :stylesIcon="styles.button_back_icon_styles" text="Назад"/>
+            <Button class="buttonBackStyles" text="Назад"/>
         </div>
     </div>
 </template>
@@ -13,7 +13,6 @@
   import PersonCard from '@/components/PersonCard'
   import FormArea from '@/components/FormArea'
   import Button from '@/components/Button'
-  import styles from '../../../public/styles.json'
   import informationDatabase from '../../../public/informationDatabase.json'
   import information from '../../../public/information.json'
   import {searchEntries} from "../../../public/searchDatabase";
@@ -27,7 +26,6 @@
     },
     data(){
       return{
-        styles: styles,
         information: information,
         informationDatabase:informationDatabase
       }
