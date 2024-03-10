@@ -1,8 +1,8 @@
 <template>
     <div class="loyalty">
-        <div >
-            <b-row v-for="(value) in data" class="discount">
-                <b-col v-for="(number) in maxNumberServices" >
+        <div>
+            <b-row v-for="(value, index) in data" :key="index" class="discount">
+                <b-col v-for="(number, index) in maxNumberServices" :key="index">
                     <i v-for="(current_number) in value.number_services" v-if="current_number===number" class="bi bi-star" ></i>
                 </b-col>
                 <b-col class="size_discount">
