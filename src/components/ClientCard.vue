@@ -25,22 +25,5 @@
 </script>
 
 <style scoped lang="scss">
-    .name{
-        text-align: right;
-        font-weight: bold;
-    }
-    li{
-        display: block;
-        font-size: 1rem;
 
-        &:last-child{
-            float: right;
-            .nav-link {
-                color: black;
-            }
-        }
-    }
-    .nav-link{
-        padding: 0.25rem;
-    }
 </style>

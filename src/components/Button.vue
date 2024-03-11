@@ -33,14 +33,5 @@
 </script>
 
 <style scoped>
-    svg{
-        margin-right: 20px;
-    }
-    button{
-        width: 100%;
-        height: 50px;
-        font-family: 'Ingrid Darling', cursive;
-        margin-bottom: .5rem;
-        font-size: 1.1rem;
-    }
+
 </style>

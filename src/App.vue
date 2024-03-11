@@ -38,7 +38,7 @@ export default {
     color: rgba(0, 0, 0) !important;
   }
   h3,h5{
-    font-family: 'Marmelad', sans-serif;
+    font-family: var(--fontStylesH);
   }
   h3{
     padding: 30px 0 10px;
@@ -54,6 +54,16 @@ export default {
   }
   .buttons{
     margin: 0 220px;
+  }
+  .buttons svg{
+    margin-right: 20px;
+  }
+  button{
+    width: 100%;
+    height: 50px;
+    font-family: 'Ingrid Darling', cursive;
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
   }
   /*контейнер, который включает в себя повтор блоков*/
   .grid-container{
@@ -83,12 +93,139 @@ export default {
     text-align: left;
   }
   .buttonBackIconStyles{
-    fill: #ffffff
+    fill: var(--colorButtonBack);
   }
   .buttonStyles button{
     border-radius: var(--borderRadiusButton);
     border: 1.8px solid var(--borderColorButton);
-    background: white;
-    color: black
+    background: var(--backgroundButton);
+    color: var(--colorButton);
+    margin-bottom: .5rem;
+  }
+  .phrase{
+    margin-bottom: 1.5rem
+  }
+  .img_specialist{
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+  }
+  .date,.time{
+    text-align: center;
+  }
+  .time{
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+  .personCard{
+    background: var(--backgroundDiv);
+    box-shadow: var(--shadow);
+  }
+  .cardPerson{
+    background: var(--backgroundDiv),.38;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  }
+  .personCard,.cardPerson{
+    border-radius: var(--borderRadiusDiv);
+    padding: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .discount{
+    margin-bottom: 8px;
+  }
+  .size_discount{
+    font-size: 1.6rem;
+    margin-top: -5px;
+    margin-bottom: 0;
+  }
+  .loyalty{
+    background: var(--backgroundDiv);
+    border-radius: var(--borderRadiusDiv);
+    padding: 20px;
+    width: calc(36px + 100%);
+    margin-left: -18px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+  }
+  .icon{
+    margin-top: 1.25%;
+    margin-right: .5%;
+  }
+  .icon i:before {
+    font-size: 1rem;
+  }
+  .input{
+    display: flex;
+  }
+  label{
+    margin-bottom: -0.05rem;
+  }
+  .searchArea{
+    background: var(--backgroundDiv);
+    border-radius: 50px;
+    padding: 2px 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+  }
+  .form{
+    display: flex;
+    flex-wrap: wrap;
+    img{
+      width: 32%;
+      margin: 0.5%;
+    }
+  }
+  .form, .formArea{
+    background: var(--backgroundDiv);
+    border-radius: var(--borderRadiusDiv);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+  }
+  .formArea img{
+    height: 230px;
+    width: 185px;
+  }
+  .form-control{
+    border-radius: 0;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.25) ;
+    border-top: none;
+    border-left:none;
+    border-right: none;
+    padding: 0.375rem 0.15rem;;
+    margin-bottom: 1rem;
+  }
+  .img{
+    background: #f5f5f5;
+    padding: 5px;
+    border: 0.25px solid rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    width: 185px;
+  }
+  .grid-container{
+    float: left;
+    text-align: center;
+    margin-right: 3%;
+  }
+  .name{
+    text-align: right;
+    font-weight: bold;
+  }
+  li{
+    display: block;
+    font-size: 1rem;
+
+    &:last-child{
+      float: right;
+      .nav-link {
+        color: black;
+      }
+    }
+  }
+  .nav-link{
+    padding: 0.25rem;
   }
 </style>

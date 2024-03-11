@@ -19,7 +19,5 @@
 </script>
 
 <style scoped>
-    .phrase{
-        margin-bottom: 1.5rem
-    }
+
 </style>

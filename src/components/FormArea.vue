@@ -88,17 +88,17 @@
         margin-bottom: -0.05rem;
     }
     .searchArea{
-        background: white;
+        background: var(--backgroundDiv);
         border-radius: 50px;
         padding: 2px 20px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: var(--shadow);
         margin-bottom: 1.5rem;
     }
     .formArea{
-        background: white;
-        border-radius: 10px;
+        background: var(--backgroundDiv);
+        border-radius: var(--borderRadiusDiv);
         padding: 20px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: var(--shadow);
         margin-bottom: 1.5rem;
     }
     .form-control{

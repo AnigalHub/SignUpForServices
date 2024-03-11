@@ -53,30 +53,5 @@
 </script>
 
 <style scoped>
-.img_specialist{
-    border-radius: 50%;
-    width: 140px;
-    height: 140px;
-}
-.date,.time{
-    text-align: center;
-}
-.time{
-    font-size: 2.2rem;
-    margin-bottom: 0;
-}
-    .personCard{
-        background: white;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        margin-bottom: 1.5rem;
-    }
-    .cardPerson{
-        background: rgba(255, 255, 255, 0.38);
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
-        margin-bottom: 1.5rem;
-    }
+
 </style>
