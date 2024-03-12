@@ -115,72 +115,92 @@
   "themes": [
     {
       "label": "Цвет фона",
-      "name": "background",
+      "name": "--background",
       "type": "text"
     },
     {
       "label": "Цвет границ кнопок",
-      "name": "borderColorButton",
+      "name": "--borderColorButton",
       "type": "text"
     },
     {
       "label": "Цвет контента",
-      "name": "backgroundContent",
+      "name": "--backgroundContent",
       "type": "text"
     },
     {
       "label": "Цвет блоков",
-      "name": "backgroundDiv",
+      "name": "--backgroundDiv",
       "type": "text"
     },
     {
       "label": "Закругленность контента",
-      "name": "borderRadiusContent",
+      "name": "--borderRadiusContent",
       "type": "text"
     },
     {
       "label": "Закругленность блоков",
-      "name": "borderRadiusDiv",
+      "name": "--borderRadiusDiv",
       "type": "text"
     },
     {
       "label": "Цвет границ контента",
-      "name": "borderColorContent",
+      "name": "--borderColorContent",
       "type": "text"
     },
     {
       "label": "Цвет границ блоков",
-      "name": "borderColorDiv",
+      "name": "--borderColorDiv",
       "type": "text"
     },
     {
       "label": "Цвет заголовков",
-      "name": "colorH",
+      "name": "--colorTitle",
       "type": "text"
     },
     {
       "label": "Цвет текста",
-      "name": "colorP",
+      "name": "--colorText",
       "type": "text"
     },
     {
       "label": "Цвет кнопок",
-      "name": "backgroundButton",
+      "name": "--backgroundButton",
+      "type": "text"
+    },
+    {
+      "label": "Цвет текста кнопок",
+      "name": "--colorButton",
+      "type": "text"
+    },
+    {
+      "label": "Цвет кнопок назад",
+      "name": "--backgroundButtonBack",
+      "type": "text"
+    },
+    {
+      "label": "Цвет текста кнопок назад",
+      "name": "--colorButtonBack",
       "type": "text"
     },
     {
       "label": "Шрифт текста",
-      "name": "fontStylesText",
+      "name": "--fontStylesText",
+      "type": "text"
+    },
+    {
+      "label": "Шрифт заголовков",
+      "name": "--fontStylesH",
       "type": "text"
     },
     {
       "label": "Закругленность кнопок",
-      "name": "borderRadiusButton",
+      "name": "--borderRadiusButton",
       "type": "text"
     },
     {
       "label": "Тень",
-      "name": "shadow",
+      "name": "--shadow",
       "type": "text"
     }
   ]

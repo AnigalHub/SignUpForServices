@@ -3,8 +3,8 @@
         <h3>{{title}}</h3>
         <input type="radio" id="1" value="1" v-model="someProperty">
         <label for="1">Выбор темы</label>
-        <div class="form" >
-
+        <div class="form">
+            <img v-for="theme in informationDatabase.themes" :src="theme.src" class="themes">
         </div>
         <input type="radio" id="2" value="2" v-model="someProperty">
         <label for="2">Настройка темы</label>

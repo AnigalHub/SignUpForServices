@@ -198,5 +198,151 @@
       "time": "20:00",
       "date": "16 января (вт)"
     }
+  ],
+  "themes": [
+    {
+      "src": "../themes/grey.jpg",
+      "alt": "Серая тема",
+      "styles": {
+        "--background": "#F3F3F4",
+        "--borderColorButton": "black",
+        "--backgroundContent": "none",
+        "--backgroundDiv": "white",
+        "--borderRadiusContent": "none",
+        "--borderRadiusDiv": "10px",
+        "--borderColorContent": "none",
+        "--borderColorDiv": "white",
+        "--colorTitle": "black",
+        "--colorText": "black",
+        "--backgroundButton": "white",
+        "--colorButton": "black",
+        "--backgroundButtonBack": "black",
+        "--colorButtonBack": "white",
+        "--fontStylesText": "normal",
+        "--fontStylesH": "'Marmelad', sans-serif",
+        "--borderRadiusButton": "15px",
+        "--shadow": "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
+      }
+    },
+    {
+      "src": "../themes/blue.jpg",
+      "alt": "Голубая тема",
+      "styles": {
+        "--background": "#f1f9fc",
+        "--borderColorButton": "#78c4e6",
+        "--backgroundContent": "none",
+        "--backgroundDiv": "white",
+        "--borderRadiusContent": "none",
+        "--borderRadiusDiv": "10px",
+        "--borderColorContent": "none",
+        "--borderColorDiv": "#78c4e6",
+        "--colorTitle": "black",
+        "--colorText": "black",
+        "--backgroundButton": "white",
+        "--colorButton": "black",
+        "--backgroundButtonBack": "black",
+        "--colorButtonBack": "white",
+        "--fontStylesText": "normal",
+        "--fontStylesH": "'Marmelad', sans-serif",
+        "--borderRadiusButton": "10px",
+        "--shadow": "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
+      }
+    },
+    {
+      "src": "../themes/pink.jpg",
+      "alt": "Розовая тема",
+      "styles": {
+        "--background": "#ffe7e3",
+        "--borderColorButton": "#a9746c",
+        "--backgroundContent": "none",
+        "--backgroundDiv": "white",
+        "--borderRadiusContent": "none",
+        "--borderRadiusDiv": "10px",
+        "--borderColorContent": "none",
+        "--borderColorDiv": "#a9746c",
+        "--colorTitle": "black",
+        "--colorText": "black",
+        "--backgroundButton": "white",
+        "--colorButton": "black",
+        "--backgroundButtonBack": "black",
+        "--colorButtonBack": "white",
+        "--fontStylesText": "normal",
+        "--fontStylesH": "'Marmelad', sans-serif",
+        "--borderRadiusButton": "10px",
+        "--shadow": "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
+      }
+    },
+    {
+      "src": "../themes/yellow.jpg",
+      "alt": "Желтая тема",
+      "styles": {
+        "--background": "#ede8d2",
+        "--borderColorButton": "#6c5c0f",
+        "--backgroundContent": "none",
+        "--backgroundDiv": "white",
+        "--borderRadiusContent": "none",
+        "--borderRadiusDiv": "10px",
+        "--borderColorContent": "none",
+        "--borderColorDiv": "#6c5c0f",
+        "--colorTitle": "black",
+        "--colorText": "black",
+        "--backgroundButton": "white",
+        "--colorButton": "black",
+        "--backgroundButtonBack": "#6c5c0f",
+        "--colorButtonBack": "white",
+        "--fontStylesText": "normal",
+        "--fontStylesH": "'Marmelad', sans-serif",
+        "--borderRadiusButton": "10px",
+        "--shadow": "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
+      }
+    },
+    {
+      "src": "../themes/green.jpg",
+      "alt": "Зеленая тема",
+      "styles": {
+        "--background": "#effaf2",
+        "--borderColorButton": "#137c2a",
+        "--backgroundContent": "none",
+        "--backgroundDiv": "white",
+        "--borderRadiusContent": "none",
+        "--borderRadiusDiv": "10px",
+        "--borderColorContent": "none",
+        "--borderColorDiv": "#137c2a",
+        "--colorTitle": "black",
+        "--colorText": "black",
+        "--backgroundButton": "white",
+        "--colorButton": "black",
+        "--backgroundButtonBack": "#137c2a",
+        "--colorButtonBack": "white",
+        "--fontStylesText": "normal",
+        "--fontStylesH": "'Marmelad', sans-serif",
+        "--borderRadiusButton": "10px",
+        "--shadow": "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
+      }
+    },
+    {
+      "src": "../themes/purple.jpg",
+      "alt": "Фиолетовая тема",
+      "styles": {
+        "--background": "#ebeafa",
+        "--borderColorButton": "#2c2b65",
+        "--backgroundContent": "none",
+        "--backgroundDiv": "white",
+        "--borderRadiusContent": "none",
+        "--borderRadiusDiv": "10px",
+        "--borderColorContent": "none",
+        "--borderColorDiv": "#2c2b65",
+        "--colorTitle": "black",
+        "--colorText": "black",
+        "--backgroundButton": "white",
+        "--colorButton": "black",
+        "--backgroundButtonBack": "#2c2b65",
+        "--colorButtonBack": "white",
+        "--fontStylesText": "normal",
+        "--fontStylesH": "'Marmelad', sans-serif",
+        "--borderRadiusButton": "10px",
+        "--shadow": "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
+      }
+    }
   ]
 }

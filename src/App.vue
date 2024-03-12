@@ -171,8 +171,9 @@ export default {
     display: flex;
     flex-wrap: wrap;
     img{
-      width: 32%;
-      margin: 0.5%;
+      width: 31.25%;
+      margin: 1%;
+      border-radius: var(--borderRadiusDiv);
     }
   }
   .form, .formArea{
