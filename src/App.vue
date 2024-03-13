@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <Navbar/>
-    <b-container>
+    <b-container style="min-height: 80vh;margin-bottom: 3vh;">
       <router-view/>
     </b-container>
+    <Footer/>
   </div>
 </template>
 
@@ -11,10 +12,12 @@
 import Authentication from '@/pages/Authentication'
 import Navbar from '@/components/Navbar'
 import LoginUp from '@/pages/LoginUp'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'App',
   components: {
+    Footer,
     LoginUp,
     Navbar,
     Authentication
@@ -228,5 +231,12 @@ export default {
   }
   .nav-link{
     padding: 0.25rem;
+  }
+  .footer{
+    background: #E8E8E8;
+    padding: 10px 0;
+    p{
+      margin-bottom: 0;
+    }
   }
 </style>
