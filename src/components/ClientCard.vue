@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="name">{{informationClient.name}} {{informationClient.surname.charAt(0)}}.</div>
+        <div class="name">{{informationClient[0].name}} {{informationClient[0].surname.charAt(0)}}.</div>
         <b-nav-item  class="menu" v-for="(list,index) in data"  :href="list.href" :key="index">
             <b-icon v-if="list.name === 'Выход'" icon="box-arrow-in-right"></b-icon>
             {{list.name}}
