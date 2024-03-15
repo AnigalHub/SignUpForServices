@@ -15,7 +15,7 @@
   import Button from '@/components/Button'
   import informationDatabase from '../../../public/informationDatabase.json'
   import information from '../../../public/information.json'
-  import {searchEntries} from "../../../public/searchDatabase";
+  import {searchEntries, searchClient} from "../../../public/searchDatabase";
 
   export default {
     name: 'MenuClientArea',
@@ -35,14 +35,14 @@
         if(this.name === 'SearchSpecialist'){
           return this.informationDatabase.specialists;
         }
-        if(this.name === 'MySpecialists'){
-         return  this.informationDatabase.my_specialists
-        }
         if(this.name === 'MyEntries'){
           return searchEntries('22',informationDatabase.specialists,informationDatabase.entries)
         }
-        if(this.name === 'MyCards' || this.name === 'WorksSpecialists'){
+        if(this.name === 'MySpecialists' || this.name === 'MyCards' || this.name === 'WorksSpecialists'){
           return this.informationDatabase.my_specialists
+        }
+        if(this.name === 'Entry'){
+          return searchClient('1',informationDatabase.my_specialists)
         }
       }
     },
