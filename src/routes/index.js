@@ -60,6 +60,15 @@ export default[
     }
   },
   {
+    path: '/Entry',
+    name: 'Entry',
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'Entry',
+      title:'Запись'
+    }
+  },
+  {
     path: '/SettingsProfile',
     name: 'SettingsProfile',
     component: () => import("../pages/SettingsProfile"),
