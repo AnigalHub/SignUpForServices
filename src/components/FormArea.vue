@@ -1,8 +1,8 @@
 <template>
     <div :class="[name === 'SearchSpecialist' ? 'searchArea' : 'formArea']">
         <div v-if=" name === 'Registration' || name === 'SettingsProfile'" class="grid-container">
-            <div v-if="!dataBase || !dataBase.src" class="img">Загрузить изображение</div>
-            <img v-if="dataBase && dataBase.src" :src="dataBase.src">
+            <div v-if="!dataBase[0] || !dataBase[0].src" class="img">Загрузить изображение</div>
+            <img v-if="dataBase[0] && dataBase[0].src" :src="dataBase[0].src">
         </div>
         <div  :style="layoutStyles" style="display: grid">
             <div v-for="(value,index) in pushArray">
@@ -34,7 +34,7 @@
     props:{
       name: String,
       data: Array,
-      dataBase: Object,
+      dataBase: Array,
       layoutStyles: {
         type: Object,
         default: () => ({}),
@@ -51,11 +51,14 @@
 
           if(this.dataBase){
             this.array.forEach((el) =>{
-              for (let key in this.dataBase) {
-                if(el.name === key){
-                  el.value = this.dataBase[key]
-                }
-              }
+              this.dataBase.forEach((param) => {
+                Object.keys(param).forEach((key) =>{
+                  if(el.name === key){
+                    el.value = this.dataBase[0][key]
+                  }
+                })
+
+              })
             })
           }
           else{
