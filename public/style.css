@@ -3,6 +3,7 @@
     --borderColorButton: black;
     --backgroundContent: none;
     --backgroundDiv: white;
+    --backgroundOpacity: rgb(255 255 255 / 45%);
     --borderRadiusContent: none;
     --borderRadiusDiv: 10px;
     --borderColorContent: none;
