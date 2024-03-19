@@ -44,6 +44,9 @@
         if(this.name === 'Entry'){
           return searchClient('1',informationDatabase.my_specialists)
         }
+        if(this.name === 'Prices'){
+          return searchClient('1',informationDatabase.my_specialists)
+        }
       }
     },
   }

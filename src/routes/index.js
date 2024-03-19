@@ -69,6 +69,15 @@ export default[
     }
   },
   {
+    path: '/Prices',
+    name: 'Prices',
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'Prices',
+      title:'Прайс услуг'
+    }
+  },
+  {
     path: '/SettingsProfile',
     name: 'SettingsProfile',
     component: () => import("../pages/SettingsProfile"),
