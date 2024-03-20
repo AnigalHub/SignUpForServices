@@ -37,6 +37,9 @@
             <div v-if="name === 'Entry'">
                 <Entry :data="value"/>
             </div>
+            <div v-if="name === 'Prices'">
+                <Prices :data="value"/>
+            </div>
         </div>
     </div>
 </template>
@@ -45,10 +48,11 @@
   import Button from '@/components/Button'
   import Loyalty from '@/components/Loyalty'
   import Entry from '@/pages/client/Entry'
+  import Prices from '@/pages/client/Prices'
 
   export default {
     name: 'PersonCard',
-    components: { Entry, Loyalty, Button },
+    components: { Prices, Entry, Loyalty, Button },
     props:{
       name: String,
       data: Array,
