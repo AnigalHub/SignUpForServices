@@ -1,27 +1,14 @@
 <template>
     <div class="entryes">
-        <div v-if="data.entry" class="entry">
-            <b>{{outputOfInformation('entry').label}}</b>
-            <div class="pre">
-                {{outputOfInformation('entry').description}}
-            </div>
-        </div>
-        <div v-if="data.prices" class="entry">
-            <b>{{outputOfInformation('prices').label}}</b>
-            <div class="pre">
-                {{outputOfInformation('prices').description}}
-            </div>
-        </div>
-        <div v-if="data.works" class="entry">
-            <b>{{outputOfInformation('works').label}}</b>
-            <div class="pre">
-                {{outputOfInformation('works').description}}
-            </div>
-        </div>
-        <div v-if="data.reviews" class="entry">
-            <b>{{outputOfInformation('reviews').label}}</b>
-            <div class="pre">
-                {{outputOfInformation('reviews').description}}
+        <div v-for="el in array">
+            <div v-if="data[el]" class="entry">
+                <a :href="outputOfInformation(el).href">
+                    <b>{{outputOfInformation(el).label}}</b>
+                    <div class="pre">
+                        {{outputOfInformation(el).description}}
+                    </div>
+                </a>
+
             </div>
         </div>
     </div>
@@ -40,6 +27,12 @@
     data() {
       return {
         information: information,
+        array:[
+          'entry',
+          'prices',
+          'works',
+          'reviews'
+        ]
       }
     },
     created () {
@@ -47,7 +40,6 @@
     },
     methods:{
       outputOfInformation(params) {
-        //let params = "entry";
         console.log('---', this.information.entry.filter((inf) => inf.name === params)[0].description)
         return this.information.entry.filter((inf) => inf.name === params)[0];
       }
@@ -55,10 +47,16 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .entryes{
         margin-right: -50px;
         margin-left: -18px;
+        a{
+            color: var(--colorText);
+            &:hover{
+                text-decoration: none;
+            }
+        }
     }
     .pre {
         margin-top: 2%;
