@@ -1,5 +1,5 @@
 <template>
-    <div class="entryes">
+    <div class="prices">
         <b-table striped hover :items="data.prices" :fields="fields"></b-table>
     </div>
 </template>
@@ -30,14 +30,5 @@
 </script>
 
 <style scoped>
-    .entryes{
-        width: 103%;
-        margin-left: -18px;
-        background: var(--backgroundDiv);
-        border-radius: var(--borderRadiusDiv);
-        padding: 20px;
-        float: left;
-        box-shadow: var(--shadow);
-        margin-bottom: 1.5rem;
-    }
+
 </style>

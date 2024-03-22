@@ -234,9 +234,23 @@ export default {
   }
   .footer{
     background: #E8E8E8;
+    text-align: center;
     padding: 10px 0;
     p{
       margin-bottom: 0;
     }
+  }
+  .prices{
+    width: 103%;
+    margin-left: -18px;
+    background: var(--backgroundDiv);
+    border-radius: var(--borderRadiusDiv);
+    padding: 20px;
+    float: left;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+  }
+  a{
+    color: var(--colorText) !important;
   }
 </style>
