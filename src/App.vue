@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navbar/>
-    <b-container style="min-height: 80vh;margin-bottom: 3vh;">
+    <b-container style="min-height: 82vh;margin-bottom: 3vh;">
       <router-view/>
     </b-container>
     <Footer/>
@@ -87,6 +87,9 @@ export default {
   }
   input[type="radio"], input[type="checkbox"] {
     margin-right: 1%;
+  }
+  table{
+    white-space: pre-line;
   }
   .buttonBackStyles button{
     border-radius: var(--borderRadiusButton);

@@ -1,6 +1,6 @@
 <template>
     <div class="prices">
-        <b-table striped hover :items="data.prices" :fields="fields"></b-table>
+        <b-table striped hover :items="data" :fields="fields"></b-table>
     </div>
 </template>
 

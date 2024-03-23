@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="(value,index) in data">
-            <b-row :class="name === 'MyCards' ||  name === 'Entry'? 'cardPerson' : 'personCard'">
+            <b-row :class="name === 'MyCards' ||  name === 'Entry' || name === 'DateTime' ? 'cardPerson' : 'personCard'">
                 <b-col cols="2">
                     <img :src="value.src" class="img_specialist">
                 </b-col>
@@ -38,7 +38,10 @@
                 <Entry :data="value"/>
             </div>
             <div v-if="name === 'Prices'">
-                <Prices :data="value"/>
+                <Prices :data="value.prices"/>
+            </div>
+            <div v-if="name === 'DateTime'">
+                <DateTime :data="value.entry"/>
             </div>
         </div>
     </div>
@@ -49,10 +52,11 @@
   import Loyalty from '@/components/Loyalty'
   import Entry from '@/pages/client/Entry'
   import Prices from '@/pages/client/Prices'
+  import DateTime from '@/pages/client/DateTime'
 
   export default {
     name: 'PersonCard',
-    components: { Prices, Entry, Loyalty, Button },
+    components: { DateTime, Prices, Entry, Loyalty, Button },
     props:{
       name: String,
       data: Array,

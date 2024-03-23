@@ -41,10 +41,7 @@
         if(this.name === 'MySpecialists' || this.name === 'MyCards' || this.name === 'WorksSpecialists'){
           return this.informationDatabase.my_specialists
         }
-        if(this.name === 'Entry'){
-          return searchClient('1',informationDatabase.my_specialists)
-        }
-        if(this.name === 'Prices'){
+        if(this.name === 'Entry' || this.name === 'Prices' || this.name === 'DateTime'){
           return searchClient('1',informationDatabase.my_specialists)
         }
       }
