@@ -78,6 +78,15 @@ export default[
     }
   },
   {
+    path: '/DateTime',
+    name: 'DateTime',
+    component: () => import("../pages/client/MenuClientArea"),
+    props:{
+      name:'DateTime',
+      title:'Выбор даты и времени'
+    }
+  },
+  {
     path: '/SettingsProfile',
     name: 'SettingsProfile',
     component: () => import("../pages/SettingsProfile"),
