@@ -9,18 +9,14 @@
 </template>
 
 <script>
-import Authentication from '@/pages/Authentication'
 import Navbar from '@/components/Navbar'
-import LoginUp from '@/pages/LoginUp'
 import Footer from '@/components/Footer'
 
 export default {
   name: 'App',
   components: {
     Footer,
-    LoginUp,
     Navbar,
-    Authentication
   }
 }
 </script>
