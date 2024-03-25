@@ -35,12 +35,8 @@
         ]
       }
     },
-    created () {
-     // this.outputOfInformation();
-    },
     methods:{
       outputOfInformation(params) {
-        console.log('---', this.information.entry.filter((inf) => inf.name === params)[0].description)
         return this.information.entry.filter((inf) => inf.name === params)[0];
       }
     }

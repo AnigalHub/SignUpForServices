@@ -256,4 +256,19 @@ export default {
   a{
     color: var(--colorText) !important;
   }
+  .times{
+    width: 100px;
+    background: var(--background);
+    border: 1.8px solid var(--background);
+    padding: 5px;
+    border-radius: 15px;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    &:hover{
+      border: 1.8px solid var(--borderColorButton);
+    }
+  }
 </style>

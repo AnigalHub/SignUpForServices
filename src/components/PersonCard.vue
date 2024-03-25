@@ -23,7 +23,10 @@
                 </b-col>
                 <b-col v-if="name === 'MyEntries'" cols="3">
                     <p class="time">{{value.time}}</p>
-                    <p class="date">{{value.date}}</p>
+                    <p class="date">
+                        {{new Date(value.date).toLocaleDateString()}}
+                        ({{getWeekDay(new Date(value.date))}})
+                    </p>
                     <Button class="buttonStyles" href="" text="Перенести запись"/>
                 </b-col>
                 <b-col cols="1">
@@ -53,6 +56,7 @@
   import Entry from '@/pages/client/Entry'
   import Prices from '@/pages/client/Prices'
   import DateTime from '@/pages/client/DateTime'
+  import { getWeekDay } from "../../public/getWeekDay";
 
   export default {
     name: 'PersonCard',
@@ -61,6 +65,11 @@
       name: String,
       data: Array,
     },
+    methods:{
+      getWeekDay(date){
+        return getWeekDay(new Date(date))
+      }
+    }
   }
 </script>
 
