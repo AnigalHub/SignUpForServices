@@ -15,51 +15,6 @@ export default[
     component: () => import("../pages/Registration")
   },
   {
-    path: '/SearchSpecialist',
-    name: 'SearchSpecialist',
-    component: () => import("../pages/client/MenuClientArea"),
-    props:{
-      name:'SearchSpecialist',
-      title:'Поиск специалиста'
-    }
-  },
-  {
-    path: '/MySpecialists',
-    name: 'MySpecialists',
-    component: () => import("../pages/client/MenuClientArea"),
-    props:{
-      name:'MySpecialists',
-      title:'Мои специалисты'
-    }
-  },
-  {
-    path: '/MyEntries',
-    name: 'MyEntries',
-    component: () => import("../pages/client/MenuClientArea"),
-    props:{
-      name:'MyEntries',
-      title:'Мои записи'
-    }
-  },
-  {
-    path: '/MyCards',
-    name: 'MyCards',
-    component: () => import("../pages/client/MenuClientArea"),
-    props:{
-      name:'MyCards',
-      title:'Карты лояльности'
-    }
-  },
-  {
-    path: '/WorksSpecialists',
-    name: 'WorksSpecialists',
-    component: () => import("../pages/client/MenuClientArea"),
-    props:{
-      name:'WorksSpecialists',
-      title:'Работы мастеров'
-    }
-  },
-  {
     path: '/Entry',
     name: 'Entry',
     component: () => import("../pages/client/MenuClientArea"),
@@ -104,4 +59,10 @@ export default[
       title:'Настройки'
     }
   },
+  {
+    path: '/new/:name',
+    name: 'common',
+    component: () => import("../pages/client/Common"),
+    props: true
+  }
 ]
