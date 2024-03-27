@@ -2,23 +2,23 @@
   "client_menu":[
     {
       "name": "Поиск нового мастера",
-      "href": "SearchSpecialist"
+      "href": "/new/SearchSpecialist"
     },
     {
       "name": "Мои мастера",
-      "href": "MySpecialists"
+      "href": "/new/MySpecialists"
     },
     {
       "name": "Мои записи",
-      "href": "MyEntries"
+      "href": "/new/MyEntries"
     },
     {
       "name": "Карты лояльности",
-      "href": "MyCards"
+      "href": "/new/MyCards"
     },
     {
       "name": "Работы мастеров",
-      "href": "WorksSpecialists"
+      "href": "/new/WorksSpecialists"
     }
   ],
   "specialist_menu": [
