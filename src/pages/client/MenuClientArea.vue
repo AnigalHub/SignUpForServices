@@ -32,15 +32,6 @@
     },
     computed:{
       informationPersonCard(){
-        if(this.name === 'SearchSpecialist'){
-          return this.informationDatabase.specialists;
-        }
-        if(this.name === 'MyEntries'){
-          return searchEntries('22',informationDatabase.specialists,informationDatabase.entries)
-        }
-        if(this.name === 'MySpecialists' || this.name === 'MyCards' || this.name === 'WorksSpecialists'){
-          return this.informationDatabase.my_specialists
-        }
         if(this.name === 'Entry' || this.name === 'Prices' || this.name === 'DateTime'){
           return searchClient('1',informationDatabase.my_specialists)
         }
