@@ -10,7 +10,7 @@
                     <p>
                         | <span v-for="(category,index) in value.category"> {{category}} | </span>
                     </p>
-                    <p>На сайте с {{value.date}}</p>
+                    <p>На сайте с {{new Date(value.date).toLocaleDateString()}}</p>
                     <p>{{value.address}}</p>
                 </b-col>
                 <b-col v-if="name === 'SearchSpecialist' || name === 'MySpecialists'"  cols="3">
