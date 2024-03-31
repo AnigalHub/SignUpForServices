@@ -37,13 +37,18 @@
           return this.$store.state[this.name].items;
         }
     },
-    watch:{
-      async name(newClass){
+    methods:{
+      async getData(newClass){
         await this.$store.dispatch(`${newClass}/getData`)
       }
     },
+    watch:{
+      async name(newClass){
+        await this.getData(newClass);
+      }
+    },
     async created () {
-      await this.$store.dispatch(`${this.name}/getData`)
+      await this.getData(this.name);
     }
   }
 </script>
