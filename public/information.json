@@ -2,23 +2,23 @@
   "client_menu":[
     {
       "name": "Поиск нового мастера",
-      "href": "/new/SearchSpecialist"
+      "href": "/client/SearchSpecialist"
     },
     {
       "name": "Мои мастера",
-      "href": "/new/MySpecialists"
+      "href": "/client/MySpecialists"
     },
     {
       "name": "Мои записи",
-      "href": "/new/MyEntries"
+      "href": "/client/MyEntries"
     },
     {
       "name": "Карты лояльности",
-      "href": "/new/MyCards"
+      "href": "/client/MyCards"
     },
     {
       "name": "Работы мастеров",
-      "href": "/new/WorksSpecialists"
+      "href": "/client/WorksSpecialists"
     }
   ],
   "specialist_menu": [
@@ -46,15 +46,15 @@
   "client_card": [
     {
       "name": "Управление профилем",
-      "href": "SettingsProfile"
+      "href": "/SettingsProfile"
     },
     {
       "name": "Настройка интерфейса",
-      "href": "SettingsInterface"
+      "href": "/SettingsInterface"
     },
     {
       "name": "Выход",
-      "href": "LoginUp"
+      "href": "/LoginUp"
     }
   ],
   "login_up": [

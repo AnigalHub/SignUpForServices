@@ -60,7 +60,7 @@ export default[
     }
   },
   {
-    path: '/new/:name',
+    path: '/client/:name',
     name: 'common',
     component: () => import("../pages/client/Common"),
     props: true
