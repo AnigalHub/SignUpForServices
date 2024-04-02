@@ -4,7 +4,7 @@
         <input type="radio" id="1" value="1" v-model="someProperty">
         <label for="1">Выбор темы</label>
         <div class="form">
-            <img v-for="theme in informationDatabase.themes" :src="theme.src" class="themes">
+            <img v-for="(theme, index) in informationDatabase.themes" :src="theme.src" :alt="'тема'+(index+1)" class="themes">
         </div>
         <input type="radio" id="2" value="2" v-model="someProperty">
         <label for="2">Настройка темы</label>
