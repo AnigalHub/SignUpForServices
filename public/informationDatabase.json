@@ -257,7 +257,7 @@
   ],
   "themes": [
     {
-      "src": "../themes/grey.jpg",
+      "src": "./themes/grey.jpg",
       "alt": "Серая тема",
       "styles": {
         "--background": "#F3F3F4",
@@ -281,7 +281,7 @@
       }
     },
     {
-      "src": "../themes/blue.jpg",
+      "src": "./themes/blue.jpg",
       "alt": "Голубая тема",
       "styles": {
         "--background": "#f1f9fc",
@@ -305,7 +305,7 @@
       }
     },
     {
-      "src": "../themes/pink.jpg",
+      "src": "./themes/pink.jpg",
       "alt": "Розовая тема",
       "styles": {
         "--background": "#ffe7e3",
@@ -329,7 +329,7 @@
       }
     },
     {
-      "src": "../themes/yellow.jpg",
+      "src": "./themes/yellow.jpg",
       "alt": "Желтая тема",
       "styles": {
         "--background": "#ede8d2",
@@ -353,7 +353,7 @@
       }
     },
     {
-      "src": "../themes/green.jpg",
+      "src": "./themes/green.jpg",
       "alt": "Зеленая тема",
       "styles": {
         "--background": "#effaf2",
@@ -377,7 +377,7 @@
       }
     },
     {
-      "src": "../themes/purple.jpg",
+      "src": "./themes/purple.jpg",
       "alt": "Фиолетовая тема",
       "styles": {
         "--background": "#ebeafa",

@@ -7,6 +7,9 @@ import MyEntries from './client/MyEntriesStore'
 import MyCards from './client/MyCardsStore'
 import WorksSpecialists from './client/WorksSpecialistsStore'
 
+import SettingsInterface from './common/SettingsInterfaceStore'
+import SettingsProfile from './common/SettingsProfileStore'
+
 
 Vue.use(Vuex)
 
@@ -24,6 +27,8 @@ export default new Vuex.Store({
     MySpecialists,
     MyCards,
     MyEntries,
-    WorksSpecialists
+    WorksSpecialists,
+    SettingsInterface,
+    SettingsProfile
   }
 })

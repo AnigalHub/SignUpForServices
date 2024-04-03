@@ -4,7 +4,7 @@
         <input type="radio" id="1" value="1" v-model="someProperty">
         <label for="1">Выбор темы</label>
         <div class="form">
-            <img v-for="(theme, index) in informationDatabase.themes" :src="theme.src" :alt="'тема'+(index+1)" class="themes">
+            <img v-for="(theme, index) in dataToShow" :src="theme.src" :alt="'тема'+(index+1)" class="themes">
         </div>
         <input type="radio" id="2" value="2" v-model="someProperty">
         <label for="2">Настройка темы</label>
@@ -20,24 +20,43 @@
   import Button from '@/components/Button'
   import FormArea from '@/components/FormArea'
   import information from '../../public/information.json'
-  import informationDatabase from '../../public/informationDatabase.json'
 
   export default {
-    name: 'SettingsInterface',
-    props:{
-      name:String,
-      title: String
-    },
     components: {  FormArea, Button },
+    name: 'SettingsInterface',
     data(){
       return{
         information: information,
-        informationDatabase: informationDatabase,
         someProperty: '1',
+        name: 'SettingsInterface',
         layoutStyles:{
           'grid-template-columns': '33% 33% 33%'
         }
       }
+    },
+    computed:{
+      currentClass(){
+        return this.$store.state[this.name]
+      },
+      title(){
+        return this.currentClass?.title ?? ""
+      },
+      dataToShow(){
+        return this.$store.state[this.name].items;
+      }
+    },
+    methods:{
+      async getData(){
+        await this.$store.dispatch(`${this.name}/getData`)
+      }
+    },
+    watch:{
+      async name(){
+        await this.getData();
+      }
+    },
+    async created () {
+      await this.getData();
     }
   }
 </script>

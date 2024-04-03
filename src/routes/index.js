@@ -45,19 +45,13 @@ export default[
     path: '/SettingsProfile',
     name: 'SettingsProfile',
     component: () => import("../pages/SettingsProfile"),
-    props:{
-      name:'SettingsProfile',
-      title:'Личные данные'
-    }
+    props: true
   },
   {
     path: '/SettingsInterface',
     name: 'SettingsInterface',
     component: () => import("../pages/SettingsInterface"),
-    props:{
-      name:'SettingsProfile',
-      title:'Настройки'
-    }
+    props: true
   },
   {
     path: '/client/:name',

@@ -1,11 +1,11 @@
 <template>
     <div>
         <h3>{{title}}</h3>
-        <FormArea  :data="information.fio" :name="name" :dataBase="informationClient"/>
+        <FormArea  :data="information.fio" :name="name" :dataBase="dataToShow"/>
         <h5>Логин и пароль</h5>
-        <FormArea :data="information.login_up"  :dataBase="informationClient"/>
+        <FormArea :data="information.login_up"  :dataBase="dataToShow"/>
         <h5>Другие данные</h5>
-        <FormArea :data="information.other_data"  :dataBase="informationClient"/>
+        <FormArea :data="information.other_data"  :dataBase="dataToShow"/>
         <div class="buttons">
             <Button class="buttonBackStyles" text="Назад"/>
         </div>
@@ -21,20 +21,36 @@
 
   export default {
     name: 'SettingsProfile',
-    props:{
-      name:String,
-      title: String
-    },
     components: { FormArea, Button },
     data(){
       return{
+        name: 'SettingsProfile',
         information: information,
       }
     },
     computed:{
-      informationClient(){
-        return searchClient('22',informationDatabase.clients)
+      currentClass(){
+        return this.$store.state[this.name]
+      },
+      title(){
+        return this.currentClass?.title ?? ""
+      },
+      dataToShow(){
+        return this.$store.state[this.name].items;
       }
+    },
+    methods:{
+      async getData(){
+        await this.$store.dispatch(`${this.name}/getData`)
+      }
+    },
+    watch:{
+      async name(){
+        await this.getData();
+      }
+    },
+    async created () {
+      await this.getData();
     },
   }
 </script>
