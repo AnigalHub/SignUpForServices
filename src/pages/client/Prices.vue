@@ -7,10 +7,10 @@
 <script>
   export default {
     name: 'Prices',
-    props:{
+    props: {
       name: String,
       title: String,
-      data: Object
+      data: Object,
     },
     data() {
       return {
@@ -24,9 +24,9 @@
             label: 'Цена',
           },
         ],
-      }
-    }
-  }
+      };
+    },
+  };
 </script>
 
 <style scoped>

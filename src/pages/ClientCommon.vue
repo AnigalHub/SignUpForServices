@@ -6,7 +6,7 @@
            :name="name"
            :data="information.search"
         />
-        <person-card :name="name" :data="informationPersonCard" />
+        <person-card :name="name" :data="dataToShow" />
         <div class="buttons">
             <button-template class="buttonBackStyles" text="Назад" />
         </div>
@@ -14,36 +14,44 @@
 </template>
 
 <script>
-  import PersonCard from '@/components/PersonCard';
   import FormArea from '@/components/FormArea';
   import ButtonTemplate from '@/components/ButtonTemplate';
-  import informationDatabase from '../../../public/informationDatabase.json';
-  import information from '../../../public/information.json';
-  import { searchClient } from '../../../public/searchDatabase';
+  import information from '../../public/information.json';
+  import PersonCard from '@/components/PersonCard';
 
   export default {
-    name: 'MenuClientArea',
+    name: 'ClientCommon',
     components: { PersonCard, FormArea, ButtonTemplate },
     props: {
       name: String,
-      title: String,
     },
     data() {
       return {
         information,
-        informationDatabase,
       };
     },
     computed: {
-      informationPersonCard() {
-        if (
-          this.name === 'Entry' ||
-          this.name === 'Prices' ||
-          this.name === 'DateTime'
-        ) {
-          return searchClient('1', informationDatabase.my_specialists);
-        }
-        return [];
+      currentClass() {
+        return this.$store.state[this.name];
+      },
+      title() {
+        return this.currentClass?.title ?? '';
+      },
+      dataToShow() {
+        return this.$store.state[this.name].items;
+      },
+    },
+    watch: {
+      async name(newClass) {
+        await this.getData(newClass);
+      },
+    },
+    async created() {
+      await this.getData(this.name);
+    },
+    methods: {
+      async getData(newClass) {
+        await this.$store.dispatch(`${newClass}/getData`);
       },
     },
   };

@@ -2,34 +2,32 @@
     <div class="loginUp">
         <h3>Регистрация</h3>
         <h5>Логин и пароль</h5>
-        <FormArea :data="information.login_up"/>
+        <form-area :data="information.login_up" />
         <h5>ФИО</h5>
-        <FormArea name="Registration" :data="information.fio"/>
+        <form-area name="Registration" :data="information.fio" />
         <h5>Другие данные</h5>
-        <FormArea :data="information.other_data"/>
+        <form-area :data="information.other_data" />
         <div class="buttons">
-            <Button class="buttonStyles" text="Сохранить"/>
-            <Button class="buttonBackStyles" text="Назад"/>
+            <button-template class="buttonStyles" text="Сохранить" />
+            <button-template class="buttonBackStyles" text="Назад" />
         </div>
     </div>
 </template>
 
 <script>
-  import Button from '@/components/Button'
-  import FormArea from '@/components/FormArea'
-  import information from '../../public/information.json'
+  import ButtonTemplate from '@/components/ButtonTemplate';
+  import FormArea from '@/components/FormArea';
+  import information from '../../public/information.json';
 
   export default {
     name: 'Registration',
-    components: { FormArea, Button },
-    data(){
-      return{
-        information: information,
-      }
+    components: { FormArea, ButtonTemplate },
+    data() {
+      return {
+        information,
+      };
     },
-  }
+  };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

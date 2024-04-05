@@ -1,66 +1,70 @@
 <template>
     <div>
-        <h3>{{title}}</h3>
-        <input type="radio" id="1" value="1" v-model="someProperty">
+        <h3>{{ title }}</h3>
+        <input id="1" v-model="someProperty" type="radio" value="1" />
         <label for="1">Выбор темы</label>
         <div class="form">
-            <img v-for="(theme, index) in dataToShow" :src="theme.src" :alt="'тема'+(index+1)" class="themes">
+            <img
+                v-for="(theme, index) in dataToShow"
+                :key="index"
+                :src="theme.src"
+                :alt="'тема' + (index + 1)"
+                class="themes"
+            />
         </div>
-        <input type="radio" id="2" value="2" v-model="someProperty">
+        <input id="2" v-model="someProperty" type="radio" value="2" />
         <label for="2">Настройка темы</label>
-        <FormArea :data="information.themes" :layoutStyles="layoutStyles"/>
+        <form-area :data="information.themes" :layoutStyles="layoutStyles" />
         <div class="buttons">
-            <Button class="buttonStyles" text="Сохранить"/>
-            <Button class="buttonBackStyles" text="Назад"/>
+            <button-template class="buttonStyles" text="Сохранить" />
+            <button-template class="buttonBackStyles" text="Назад" />
         </div>
     </div>
 </template>
 
 <script>
-  import Button from '@/components/Button'
-  import FormArea from '@/components/FormArea'
-  import information from '../../public/information.json'
+  import ButtonTemplate from '@/components/ButtonTemplate';
+  import FormArea from '@/components/FormArea';
+  import information from '../../public/information.json';
 
   export default {
-    components: {  FormArea, Button },
     name: 'SettingsInterface',
-    data(){
-      return{
-        information: information,
+    components: { FormArea, ButtonTemplate },
+    data() {
+      return {
+        information,
         someProperty: '1',
         name: 'SettingsInterface',
-        layoutStyles:{
-          'grid-template-columns': '33% 33% 33%'
-        }
-      }
+        layoutStyles: {
+          'grid-template-columns': '33% 33% 33%',
+        },
+      };
     },
-    computed:{
-      currentClass(){
-        return this.$store.state[this.name]
+    computed: {
+      currentClass() {
+        return this.$store.state[this.name];
       },
-      title(){
-        return this.currentClass?.title ?? ""
+      title() {
+        return this.currentClass?.title ?? '';
       },
-      dataToShow(){
+      dataToShow() {
         return this.$store.state[this.name].items;
-      }
+      },
     },
-    methods:{
-      async getData(){
-        await this.$store.dispatch(`${this.name}/getData`)
-      }
-    },
-    watch:{
-      async name(){
+    watch: {
+      async name() {
         await this.getData();
-      }
+      },
     },
-    async created () {
+    async created() {
       await this.getData();
-    }
-  }
+    },
+    methods: {
+      async getData() {
+        await this.$store.dispatch(`${this.name}/getData`);
+      },
+    },
+  };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

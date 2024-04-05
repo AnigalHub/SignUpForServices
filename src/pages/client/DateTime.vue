@@ -1,6 +1,6 @@
 <template>
     <div class="prices">
-        <b-table-simple hover >
+        <b-table-simple hover>
             <b-thead>
                 <b-tr>
                     <b-th style="width: 20%">Дата</b-th>
@@ -8,14 +8,14 @@
                 </b-tr>
             </b-thead>
             <b-tbody>
-                <b-tr v-for="(td,index) in data" :key="index">
+                <b-tr v-for="(td, index) in data" :key="index">
                     <td>
-                        {{new Date(td.date).toLocaleDateString() }}
-                        ({{getWeekDay(new Date(td.date))}})
+                        {{ new Date(td.date).toLocaleDateString() }}
+                        ({{ getWeekDay(new Date(td.date)) }})
                     </td>
                     <td>
-                        <div v-for="time in td.times" class="times">
-                            {{time.time}}
+                        <div v-for="(time, index) in td.times" :key="index" class="times">
+                            {{ time.time }}
                         </div>
                     </td>
                 </b-tr>
@@ -25,22 +25,21 @@
 </template>
 
 <script>
-  import { getWeekDay } from "../../../public/getWeekDay";
+  import { getWeekDay } from '../../../public/getWeekDay';
+
   export default {
     name: 'DateTime',
-    props:{
+    props: {
       name: String,
       title: String,
-      data: Array
+      data: Array,
     },
-    methods:{
-      getWeekDay(date){
-        return getWeekDay(new Date(date))
-      }
-    }
-  }
+    methods: {
+      getWeekDay(date) {
+        return getWeekDay(new Date(date));
+      },
+    },
+  };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

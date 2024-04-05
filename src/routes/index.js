@@ -56,7 +56,7 @@ export default[
   {
     path: '/client/:name',
     name: 'common',
-    component: () => import("../pages/client/Common"),
+    component: () => import("../pages/ClientCommon"),
     props: true
   }
 ]
