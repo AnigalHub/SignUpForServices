@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-    <Navbar/>
-    <b-container style="min-height: 82vh;margin-bottom: 3vh;">
-      <router-view/>
+    <navbar-template />
+    <b-container style="min-height: 82vh; margin-bottom: 3vh">
+      <router-view />
     </b-container>
-    <Footer/>
+    <footer-template />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+  import NavbarTemplate from '@/components/NavbarTemplate';
+  import FooterTemplate from '@/components/FooterTemplate';
 
-export default {
-  name: 'App',
-  components: {
-    Footer,
-    Navbar,
-  }
-}
+  export default {
+    name: 'App',
+    components: {
+      FooterTemplate,
+      NavbarTemplate,
+    },
+  };
 </script>
 
 <style lang="scss">
@@ -29,43 +29,45 @@ export default {
     min-height: 100vh;
     padding: 0;
   }
-  body{
+  body {
     padding: 0;
     margin: 0;
   }
   .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0) !important;
   }
-  h3,h5{
+  h3,
+  h5 {
     font-family: var(--fontStylesH);
   }
-  h3{
+  h3 {
     padding: 30px 0 10px;
   }
-  h5{
+  h5 {
     padding: 0 0 10px;
   }
-  .authentication h3, .authentication h5{
+  .authentication h3,
+  .authentication h5 {
     text-align: center;
   }
-  h5 span{
+  h5 span {
     font-family: 'Miltonian Tattoo', serif;
   }
-  .buttons{
+  .buttons {
     margin: 0 220px;
   }
-  .buttons svg{
+  .buttons svg {
     margin-right: 20px;
   }
-  button{
+  button {
     width: 100%;
     height: 50px;
     font-family: 'Ingrid Darling', cursive;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     font-size: 1.1rem;
   }
   /*контейнер, который включает в себя повтор блоков*/
-  .grid-container{
+  .grid-container {
     max-width: 1200px;
     margin: 0 auto 15px;
     display: grid;
@@ -73,74 +75,77 @@ export default {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     & > div {
       justify-self: stretch;
-      &:first-child{
+      &:first-child {
         margin-right: 1%;
       }
     }
   }
-  i:before{
+  i:before {
     font-size: 1.8rem;
   }
-  input[type="radio"], input[type="checkbox"] {
+  input[type='radio'],
+  input[type='checkbox'] {
     margin-right: 1%;
   }
-  table{
+  table {
     white-space: pre-line;
   }
-  .buttonBackStyles button{
+  .buttonBackStyles button {
     border-radius: var(--borderRadiusButton);
     background: var(--backgroundButtonBack);
     color: var(--colorButtonBack);
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     text-align: left;
   }
-  .buttonBackIconStyles{
+  .buttonBackIconStyles {
     fill: var(--colorButtonBack);
   }
-  .buttonStyles button{
+  .buttonStyles button {
     border-radius: var(--borderRadiusButton);
     border: 1.8px solid var(--borderColorButton);
     background: var(--backgroundButton);
     color: var(--colorButton);
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
-  .phrase{
-    margin-bottom: 1.5rem
+  .phrase {
+    margin-bottom: 1.5rem;
   }
-  .img_specialist{
+  .img_specialist {
     border-radius: 50%;
     width: 140px;
     height: 140px;
   }
-  .date,.time{
+  .date,
+  .time {
     text-align: center;
   }
-  .time{
+  .time {
     font-size: 2.2rem;
     margin-bottom: 0;
   }
-  .personCard{
+  .personCard {
     background: var(--backgroundDiv);
     box-shadow: var(--shadow);
   }
-  .cardPerson{
+  .cardPerson {
     background: var(--backgroundOpacity);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
   }
-  .personCard,.cardPerson{
+  .personCard,
+  .cardPerson {
     border-radius: var(--borderRadiusDiv);
     padding: 20px;
     margin-bottom: 1.5rem;
   }
-  .discount{
+  .discount {
     margin-bottom: 8px;
   }
-  .size_discount{
+  .size_discount {
     font-size: 1.6rem;
     margin-top: -5px;
     margin-bottom: 0;
   }
-  .loyalty{
+  .loyalty {
     background: var(--backgroundDiv);
     border-radius: var(--borderRadiusDiv);
     padding: 20px;
@@ -149,56 +154,57 @@ export default {
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
   }
-  .icon{
+  .icon {
     margin-top: 1.25%;
-    margin-right: .5%;
+    margin-right: 0.5%;
   }
   .icon i:before {
     font-size: 1rem;
   }
-  .input{
+  .input {
     display: flex;
   }
-  label{
+  label {
     margin-bottom: -0.05rem;
   }
-  .searchArea{
+  .searchArea {
     background: var(--backgroundDiv);
     border-radius: 50px;
     padding: 2px 20px;
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
   }
-  .form{
+  .form {
     display: flex;
     flex-wrap: wrap;
-    img{
+    img {
       width: 31.25%;
       margin: 1%;
       border-radius: var(--borderRadiusDiv);
     }
   }
-  .form, .formArea{
+  .form,
+  .formArea {
     background: var(--backgroundDiv);
     border-radius: var(--borderRadiusDiv);
     padding: 20px;
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
   }
-  .formArea img{
+  .formArea img {
     height: 230px;
     width: 185px;
   }
-  .form-control{
+  .form-control {
     border-radius: 0;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.25) ;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
     border-top: none;
-    border-left:none;
+    border-left: none;
     border-right: none;
-    padding: 0.375rem 0.15rem;;
+    padding: 0.375rem 0.15rem;
     margin-bottom: 1rem;
   }
-  .img{
+  .img {
     background: #f5f5f5;
     padding: 5px;
     border: 0.25px solid rgba(0, 0, 0, 0.25);
@@ -208,38 +214,38 @@ export default {
     height: 230px;
     width: 185px;
   }
-  .grid-container{
+  .grid-container {
     float: left;
     text-align: center;
     margin-right: 3%;
   }
-  .name{
+  .name {
     text-align: right;
     font-weight: bold;
   }
-  li{
+  li {
     display: block;
     font-size: 1rem;
 
-    &:last-child{
+    &:last-child {
       float: right;
       .nav-link {
         color: black;
       }
     }
   }
-  .nav-link{
+  .nav-link {
     padding: 0.25rem;
   }
-  .footer{
-    background: #E8E8E8;
+  .footer {
+    background: #e8e8e8;
     text-align: center;
     padding: 10px 0;
-    p{
+    p {
       margin-bottom: 0;
     }
   }
-  .prices{
+  .prices {
     width: 103%;
     margin-left: -18px;
     background: var(--backgroundDiv);
@@ -249,10 +255,10 @@ export default {
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
   }
-  a{
+  a {
     color: var(--colorText) !important;
   }
-  .times{
+  .times {
     width: 100px;
     background: var(--background);
     border: 1.8px solid var(--background);
@@ -263,7 +269,7 @@ export default {
     text-align: center;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    &:hover{
+    &:hover {
       border: 1.8px solid var(--borderColorButton);
     }
   }

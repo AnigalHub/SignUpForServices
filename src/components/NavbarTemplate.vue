@@ -50,7 +50,7 @@
   import ClientCard from '@/components/ClientCard';
 
   export default {
-    name: 'Navbar',
+    name: 'NavbarTemplate',
     components: { ClientCard, logo },
     data() {
       return {

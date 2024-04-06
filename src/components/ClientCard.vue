@@ -1,29 +1,36 @@
 <template>
     <div>
-        <div class="name">{{informationClient[0].name}} {{informationClient[0].surname.charAt(0)}}.</div>
-        <b-nav-item  class="menu" v-for="(list,index) in data"  :href="list.href" :key="index">
-            <b-icon v-if="list.name === 'Выход'" icon="box-arrow-in-right"></b-icon>
-            {{list.name}}
+        <div class="name">
+            {{ informationClient[0].name }}
+            {{ informationClient[0].surname.charAt(0) }}.
+        </div>
+        <b-nav-item
+            v-for="(list, index) in data"
+            :key="index"
+            class="menu"
+            :href="list.href"
+        >
+            <b-icon v-if="list.name === 'Выход'" icon="box-arrow-in-right"/>
+            {{ list.name }}
         </b-nav-item>
     </div>
 </template>
 
 <script>
-  import { searchClient } from "../../public/searchDatabase";
-  import informationDatabase from '../../public/informationDatabase.json'
+  import { searchClient } from '../../public/searchDatabase';
+  import informationDatabase from '../../public/informationDatabase.json';
+
   export default {
     name: 'ClientCard',
-    props:{
+    props: {
       data: Array,
     },
-    computed:{
-      informationClient(){
-        return searchClient('22',informationDatabase.clients)
-      }
+    computed: {
+      informationClient() {
+        return searchClient('22', informationDatabase.clients);
+      },
     },
-  }
+  };
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

@@ -1,15 +1,19 @@
-import informationDatabase from '../../../public/informationDatabase.json'
-import { searchEntries } from '../../../public/searchDatabase'
+import informationDatabase from '../../../public/informationDatabase.json';
+import { searchEntries } from '../../../public/searchDatabase';
 
-export  default  {
+export default {
   namespaced: true,
   state: {
     title: 'Карты лояльности',
-    items: []
+    items: [],
   },
-  actions:{
-    getData(ctx){
-      ctx.state.items = searchEntries('22',informationDatabase.specialists,informationDatabase.entries)
-    }
-  }
-}
+  actions: {
+    getData(ctx) {
+      ctx.state.items = searchEntries(
+        '22',
+        informationDatabase.specialists,
+        informationDatabase.entries,
+      );
+    },
+  },
+};

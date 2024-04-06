@@ -1,14 +1,14 @@
-import informationDatabase from '../../../public/informationDatabase.json'
+import informationDatabase from '../../../public/informationDatabase.json';
 
-export  default  {
+export default {
   namespaced: true,
   state: {
     title: 'Настройки',
-    items: []
+    items: [],
   },
-  actions:{
-    getData(ctx){
-      ctx.state.items = informationDatabase.themes
-    }
-  }
-}
+  actions: {
+    getData(ctx) {
+      ctx.state.items = informationDatabase.themes;
+    },
+  },
+};
