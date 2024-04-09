@@ -27,7 +27,7 @@
                 >
                     <button-template
                         class="buttonStyles"
-                        href="Entry"
+                        href="/client/Entry"
                         text="Записаться"
                     />
                     <button-template class="buttonStyles" href="" text="Портфолио" />
