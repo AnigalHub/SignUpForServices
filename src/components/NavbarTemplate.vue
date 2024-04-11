@@ -1,5 +1,5 @@
 <template>
-    <b-navbar class="navbar-expand-lg sticky-top" toggleable>
+    <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
         <b-container>
             <b-navbar-brand to="/">
                 <logo />
@@ -33,11 +33,17 @@
                     height="30"
                     @click="onIconClick"
                 ></b-icon>
+                <client-card
+                  :data="information.client_card"
+                  name="mobile"
+                  class="mobile"
+                />
             </b-collapse>
             <client-card
                 v-if="isShown"
                 :isShown="isShown"
                 :data="information.client_card"
+                name="desktop"
                 class="desktop"
             />
         </b-container>
@@ -52,13 +58,13 @@
   export default {
     name: 'NavbarTemplate',
     components: { ClientCard, logo },
-    data() {
-      return {
+    data(){
+      return{
         information,
         isShown: false,
       };
     },
-    methods: {
+    methods:{
       onIconClick() {
         this.isShown = !this.isShown;
       },
@@ -75,25 +81,35 @@
         height: 160px;
         padding: 15px;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 59%;
+        left: 47.5%;
         margin: 20px 0 0 185px;
     }
-    .navbar {
-        height: 50px;
-        padding: 0 40px;
+    .mobile{
+        margin-left: -14px;
+        display: none;
+    }
+    /*меню*/
+    .navbar-nav{
+        margin-bottom: 0 !important;
+    }
+    /*блок под логотип(картинка, название компании, что за компания(производственная))*/
+    .navbar-brand{
+        padding-top: 0.2rem !important;
+        padding-bottom: 0.2rem !important;
+    }
+    /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
+    .navbar{
         background: white;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         .menu {
             display: flex;
-            font-size: 1.1rem;
-            margin: 0 10px;
+            font-size: 1rem;
         }
         .no_logo {
             margin: 0 auto;
         }
         .icon_person {
-            margin-left: 45px;
             cursor: pointer;
         }
     }
@@ -105,6 +121,12 @@
         }
     }
     @media screen and (max-width: 1200px) {
+        .navbar .icon_person{
+            display: none;
+        }
+        .mobile{
+            display: block;
+        }
         .navbar .menu {
             font-size: 1rem;
         }

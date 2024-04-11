@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="name">
+        <div v-if="name === 'desktop'" class="name">
             {{ informationClient[0].name }}
             {{ informationClient[0].surname.charAt(0) }}.
         </div>
@@ -24,6 +24,7 @@
     name: 'ClientCard',
     props: {
       data: Array,
+      name:String,
     },
     computed: {
       informationClient() {
