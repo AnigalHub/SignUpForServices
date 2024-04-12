@@ -1,5 +1,5 @@
 <template>
-    <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
+    <b-navbar id="Nav" class="navbar-expand-lg sticky-top" toggleable>
         <b-container>
             <b-navbar-brand to="/">
                 <logo />
@@ -12,7 +12,6 @@
             </b-navbar-toggle>
             <b-collapse
                id="navbar-toggle-collapse"
-               class="justify-content-center"
                is-nav
             >
                 <b-navbar-nav>
@@ -41,7 +40,6 @@
             </b-collapse>
             <client-card
                 v-if="isShown"
-                :isShown="isShown"
                 :data="information.client_card"
                 name="desktop"
                 class="desktop"
@@ -86,7 +84,7 @@
         margin: 20px 0 0 185px;
     }
     .mobile{
-        margin-left: -14px;
+        margin-left: -15px;
         display: none;
     }
     /*меню*/
@@ -111,16 +109,17 @@
         }
         .icon_person {
             cursor: pointer;
+            margin-top: 2px;
+            margin-left: 10px;
         }
     }
-    @media screen and (min-width: 992px) {
-        .navbar-expand-lg .navbar-nav .nav-link {
-            padding-right: 0.05rem !important;
-            padding-left: 0.05rem !important;
-            font-size: 0.9rem;
-        }
+    .navbar-light .navbar-toggler {
+        color: rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.1);
+        width: auto;
+        height: auto;
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 992px) {
         .navbar .icon_person{
             display: none;
         }

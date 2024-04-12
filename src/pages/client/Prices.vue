@@ -10,7 +10,7 @@
     props: {
       name: String,
       title: String,
-      data: Object,
+      data: Array,
     },
     data() {
       return {
