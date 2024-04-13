@@ -1,14 +1,12 @@
 <template>
     <div class="entryes">
-        <div v-for="(el, index) in array" :key="index">
-            <div v-if="data[el]" class="entry">
-                <a :href="outputOfInformation(el).href">
-                    <b>{{ outputOfInformation(el).label }}</b>
-                    <div class="pre">
-                        {{ outputOfInformation(el).description }}
-                    </div>
-                </a>
-            </div>
+        <div v-for="(el, index) in filterArray" :key="index" class="entry">
+            <a :href="outputOfInformation(el).href">
+                <b>{{ outputOfInformation(el).label }}</b>
+                <div class="pre">
+                    {{ outputOfInformation(el).description }}
+                </div>
+            </a>
         </div>
     </div>
 </template>
@@ -29,6 +27,17 @@
         array: ['entry', 'prices', 'works', 'reviews'],
       };
     },
+    computed: {
+      filterArray() {
+        const filterArray = [];
+        this.array.forEach((el) => {
+          if (this.data[el]) {
+            filterArray.push(el);
+          }
+        });
+        return filterArray;
+      },
+    },
     methods: {
       outputOfInformation(params) {
         return this.information.entry.filter((inf) => inf.name === params)[0];
@@ -39,8 +48,6 @@
 
 <style scoped lang="scss">
     .entryes {
-        margin-right: -50px;
-        margin-left: -18px;
         a {
             color: var(--colorText);
             &:hover {
@@ -56,10 +63,14 @@
         background: var(--backgroundDiv);
         border-radius: var(--borderRadiusDiv);
         padding: 20px;
-        width: 48%;
-        margin-right: 1%;
+        width: 49%;
+        margin-right: 2%;
         float: left;
         box-shadow: var(--shadow);
-        margin-bottom: 1.5rem;
+        margin-bottom: 2%;
+    }
+    .entry:nth-child(2) {
+        margin-right: 0;
+        width: 49%;
     }
 </style>

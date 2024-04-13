@@ -2,11 +2,11 @@
     <div>
         <div v-for="(value, index) in data" :key="index">
             <b-row
-                :class="
-                    name === 'MyCards' || name === 'Entry' || name === 'DateTime'
-                    ? 'cardPerson'
-                    : 'personCard'
-                "
+              :class="
+              name === 'MyCards' || name === 'Entry' || name === 'DateTime'
+                ? 'cardPerson'
+                : 'personCard'
+              "
             >
                 <b-col cols="2">
                     <img :src="value.src" class="img_specialist" />
@@ -15,21 +15,17 @@
                     <b>{{ value.surname }} {{ value.name }} {{ value.patronymic }}</b>
                     <p>|
                         <span v-for="(category, index) in value.category" :key="index">
-                          {{ category }} |
-                        </span>
+              {{ category }} |
+            </span>
                     </p>
                     <p>На сайте с {{ new Date(value.date).toLocaleDateString() }}</p>
                     <p>{{ value.address }}</p>
                 </b-col>
                 <b-col
-                    v-if="name === 'SearchSpecialist' || name === 'MySpecialists'"
-                    cols="3"
+                   v-if="name === 'SearchSpecialist' || name === 'MySpecialists'"
+                   cols="3"
                 >
-                    <button-template
-                        class="buttonStyles"
-                        href="/client/Entry"
-                        text="Записаться"
-                    />
+                    <button-template class="buttonStyles" href="/client/Entry" text="Записаться"/>
                     <button-template class="buttonStyles" href="" text="Портфолио" />
                 </b-col>
                 <b-col v-if="name === 'WorksSpecialists'" cols="3">
@@ -43,22 +39,18 @@
                         ({{ getWeekDay(new Date(value.date)) }})
                     </p>
                     <button-template
-                        class="buttonStyles"
-                        href=""
-                        text="Перенести запись"
+                       class="buttonStyles"
+                       href=""
+                       text="Перенести запись"
                     />
                 </b-col>
-                <b-col cols="1">
-                    <i
-                       v-if="name === 'SearchSpecialist' || name === 'MyEntries'"
-                       class="bi bi-heart"
-                    ></i>
-                    <i
-                       v-if="name === 'MySpecialists' || name === 'MyCards'
-                       || name === 'WorksSpecialists'"
-                       class="bi bi-heart-fill"
-                    ></i>
-                </b-col>
+                <i
+                   v-if="name === 'SearchSpecialist' || name === 'MyEntries'"
+                   class="bi bi-heart"
+                ></i>
+                <i v-if="name === 'MySpecialists' || name === 'MyCards' || name === 'WorksSpecialists'"
+                  class="bi bi-heart-fill"
+                ></i>
             </b-row>
             <div v-if="name === 'MyCards' && value.loyalty.length">
                 <loyalty :data="value.loyalty" />
@@ -99,4 +91,8 @@
   };
 </script>
 
-<style scoped></style>
+<style scoped>
+    i:before {
+        font-size: 1.5rem;
+    }
+</style>
