@@ -40,7 +40,7 @@
                     </p>
                     <button-template
                        class="buttonStyles"
-                       href=""
+                       href="/client/DateTime"
                        text="Перенести запись"
                     />
                 </b-col>

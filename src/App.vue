@@ -29,6 +29,12 @@
     min-height: 100vh;
     padding: 0;
   }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
   body {
     padding: 0;
     margin: 0;
@@ -53,15 +59,18 @@
   h5 span {
     font-family: 'Miltonian Tattoo', serif;
   }
-  .buttons {
-    margin: 0 220px;
-  }
   .buttons svg {
     margin-right: 20px;
   }
+  .buttons button{
+    width: 60%;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+  }
+
   button {
     width: 100%;
-    height: 50px;
     font-family: 'Ingrid Darling', cursive;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
@@ -101,6 +110,7 @@
     fill: var(--colorButtonBack);
   }
   .buttonStyles button {
+    min-height: 45px;
     border-radius: var(--borderRadiusButton);
     border: 1.8px solid var(--borderColorButton);
     background: var(--backgroundButton);
@@ -112,6 +122,7 @@
   }
   .img_specialist {
     border-radius: 50%;
+    margin-left: -15px;
     width: 140px;
     height: 140px;
   }
@@ -149,8 +160,7 @@
     background: var(--backgroundDiv);
     border-radius: var(--borderRadiusDiv);
     padding: 20px;
-    width: calc(36px + 100%);
-    margin-left: -18px;
+    width: 100%;
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
   }
@@ -246,8 +256,7 @@
     }
   }
   .prices {
-    width: 103%;
-    margin-left: -18px;
+    width: 100%;
     background: var(--backgroundDiv);
     border-radius: var(--borderRadiusDiv);
     padding: 20px;
@@ -272,5 +281,15 @@
     &:hover {
       border: 1.8px solid var(--borderColorButton);
     }
+  }
+  @media (min-width: 1200px){
+   .container{
+     max-width: 1110px !important;
+   }
+  }
+  @media (min-width: 992px){
+   .container{
+     max-width: 900px !important;
+   }
   }
 </style>
