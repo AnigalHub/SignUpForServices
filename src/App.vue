@@ -123,8 +123,7 @@
   .img_specialist {
     border-radius: 50%;
     margin-left: -15px;
-    width: 140px;
-    height: 140px;
+    width: 110%;
   }
   .date,
   .time {
@@ -290,6 +289,24 @@
   @media (min-width: 992px){
    .container{
      max-width: 900px !important;
+   }
+  }
+  @media (max-width: 768px){
+   .personCard{
+     flex-direction: column;
+     i{
+       position: absolute !important;
+       left: 78% !important;
+     }
+     .col,.col-3,.col-2{
+       max-width: 100%;
+     }
+     .img_specialist{
+       border-radius: 50%;
+       width: 50%;
+       margin: 0 auto;
+       display: block;
+     }
    }
   }
 </style>
