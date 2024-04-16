@@ -5,6 +5,7 @@
            v-if="name === 'SearchSpecialist'"
            :name="name"
            :data="information.search"
+           :model="searchName"
         />
         <person-card :name="name" :data="dataToShow" />
         <div class="buttons">
@@ -31,6 +32,9 @@
       };
     },
     computed: {
+      searchName(){
+        return this.currentClass?.search ?? ''
+      },
       currentClass() {
         return this.$store.state[this.name];
       },

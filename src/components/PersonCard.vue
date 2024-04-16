@@ -8,7 +8,7 @@
                 : 'personCard'
               "
             >
-                <b-col cols="2">
+                <b-col cols="3">
                     <img :src="value.src" class="img_specialist" />
                 </b-col>
                 <b-col>

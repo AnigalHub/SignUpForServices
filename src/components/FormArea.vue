@@ -42,6 +42,7 @@
       name: String,
       data: Array,
       dataBase: Array,
+      model: String,
       layoutStyles: {
         type: Object,
         default: () => ({}),
@@ -68,7 +69,12 @@
           });
         } else {
           this.array.forEach((el) => {
-            el.value = '';
+            if(this.model){
+              el.value = this.model
+            }
+            else{
+              el.value = '';
+            }
           });
         }
         return this.array;
