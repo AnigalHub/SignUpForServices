@@ -131,7 +131,7 @@
   }
   .time {
     font-size: 2.2rem;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
   .personCard {
     background: var(--backgroundDiv);
@@ -281,6 +281,10 @@
       border: 1.8px solid var(--borderColorButton);
     }
   }
+  .registTime{
+    font-weight: 500;
+    color: #0c59ab;
+  }
   @media (min-width: 1200px){
    .container{
      max-width: 1110px !important;
@@ -292,14 +296,29 @@
    }
   }
   @media (max-width: 768px){
-   .personCard{
+    p{
+      margin-bottom: .5rem !important;
+    }
+    .formArea{
+      .grid-container{
+        float: none !important;
+        img{
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+   .personCard,.cardPerson{
      flex-direction: column;
+     position: relative;
      i{
        position: absolute !important;
-       left: 78% !important;
+       right: 5% !important;
      }
      .col,.col-3,.col-2{
        max-width: 100%;
+       padding-right: 0;
+       padding-left: 0;
      }
      .img_specialist{
        border-radius: 50%;
@@ -308,5 +327,8 @@
        display: block;
      }
    }
+    .entry{
+      width: 100% !important;
+    }
   }
 </style>

@@ -18,7 +18,7 @@
               {{ category }} |
             </span>
                     </p>
-                    <p>На сайте с {{ new Date(value.date).toLocaleDateString() }}</p>
+                    <p class="registTime">На сайте с {{ new Date(value.date).toLocaleDateString() }}</p>
                     <p>{{ value.address }}</p>
                 </b-col>
                 <b-col

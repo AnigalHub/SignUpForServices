@@ -65,12 +65,15 @@
         padding: 20px;
         width: 49%;
         margin-right: 2%;
+        margin-bottom: 1rem;
         float: left;
         box-shadow: var(--shadow);
-        margin-bottom: 2%;
     }
     .entry:nth-child(2) {
         margin-right: 0;
         width: 49%;
+    }
+    .entry:last-child{
+        margin-bottom: 1.5rem;
     }
 </style>
