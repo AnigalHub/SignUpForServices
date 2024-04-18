@@ -302,9 +302,8 @@
     .formArea{
       .grid-container{
         float: none !important;
-        img{
+        img, .img{
           margin: 0 auto;
-          display: block;
         }
       }
     }

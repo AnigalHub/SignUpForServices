@@ -1,13 +1,10 @@
 <template>
     <div :class="[name === 'SearchSpecialist' ? 'searchArea' : 'formArea']">
-        <div
-           v-if="name === 'Registration' || name === 'SettingsProfile'"
-           class="grid-container"
-        >
-            <div v-if="!dataBase[0] || !dataBase[0].src" class="img">
+        <div v-if="name === 'Registration' || name === 'SettingsProfile'"  class="grid-container">
+            <div v-if="!dataBase" class="img">
                 Загрузить изображение
             </div>
-            <img v-if="dataBase[0] && dataBase[0].src" :src="dataBase[0].src" />
+            <img v-if="dataBase" :src="dataBase[0].src" />
         </div>
         <div :style="layoutStyles" style="display: grid">
             <div v-for="(value, index) in pushArray" :key="index">
@@ -52,6 +49,9 @@
       return {
         array: [],
       };
+    },
+    created () {
+      console.log('this.data', { data: this.dataBase})
     },
     computed: {
       pushArray() {
