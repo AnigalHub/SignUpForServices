@@ -51,6 +51,7 @@
                 <i v-if="name === 'MySpecialists' || name === 'MyCards' || name === 'WorksSpecialists'"
                   class="bi bi-heart-fill"
                 ></i>
+                <i v-if="name === 'Entry' || name === 'DateTime' || name === 'Prices'" class="bi bi-box-arrow-up-right"></i>
             </b-row>
             <div v-if="name === 'MyCards' && value.loyalty.length">
                 <loyalty :data="value.loyalty" />

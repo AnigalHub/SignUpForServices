@@ -99,6 +99,10 @@
   table {
     white-space: pre-line;
   }
+  .table th, .table td {
+      text-align: left;
+  }
+
   .buttonBackStyles button {
     border-radius: var(--borderRadiusButton);
     background: var(--backgroundButtonBack);
@@ -274,6 +278,7 @@
     border-radius: 15px;
     float: left;
     margin-right: 10px;
+    margin-bottom: 10px;
     text-align: center;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
