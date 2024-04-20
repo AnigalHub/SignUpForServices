@@ -9,6 +9,7 @@ import WorksSpecialists from './client/WorksSpecialistsStore';
 import Entry from './client/EntryStore';
 import DateTime from './client/DateTimeStore';
 import Prices from './client/PricesStore';
+import Portfolio from './client/PortfolioStore';
 
 import SettingsInterface from './common/SettingsInterfaceStore';
 import SettingsProfile from './common/SettingsProfileStore';
@@ -29,6 +30,7 @@ export default new Vuex.Store({
     Entry,
     DateTime,
     Prices,
+    Portfolio,
 
     SettingsInterface,
     SettingsProfile,

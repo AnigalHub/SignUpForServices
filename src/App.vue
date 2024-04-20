@@ -42,7 +42,7 @@
   .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0) !important;
   }
-  h3,
+  h3,h4,
   h5 {
     font-family: var(--fontStylesH);
   }

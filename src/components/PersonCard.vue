@@ -26,7 +26,7 @@
                    cols="3"
                 >
                     <button-template class="buttonStyles" href="/client/Entry" text="Записаться"/>
-                    <button-template class="buttonStyles" href="" text="Портфолио" />
+                    <button-template class="buttonStyles" href="/client/Portfolio" text="Портфолио" />
                 </b-col>
                 <b-col v-if="name === 'WorksSpecialists'" cols="3">
                     <button-template class="buttonStyles" href="" text="Все работы" />
@@ -51,19 +51,22 @@
                 <i v-if="name === 'MySpecialists' || name === 'MyCards' || name === 'WorksSpecialists'"
                   class="bi bi-heart-fill"
                 ></i>
-                <i v-if="name === 'Entry' || name === 'DateTime' || name === 'Prices'" class="bi bi-box-arrow-up-right"></i>
+                <i v-if="name === 'Entry' || name === 'DateTime' || name === 'Prices' || name === 'Portfolio'" class="bi bi-box-arrow-up-right"></i>
             </b-row>
-            <div v-if="name === 'MyCards' && value.loyalty.length">
-                <loyalty :data="value.loyalty" />
-            </div>
             <div v-if="name === 'Entry'">
                 <entry :data="value" />
             </div>
-            <div v-if="name === 'Prices'">
+            <div v-if="name === 'DateTime' || name === 'Portfolio'">
+                <h4 v-if="name === 'Portfolio'">Выбор даты и времени:</h4>
+                <date-time :data="value.entry" />
+            </div>
+            <div v-if="name === 'Prices' || name === 'Portfolio'">
+                <h4 v-if="name === 'Portfolio'">Прайс:</h4>
                 <prices :data="value.prices" />
             </div>
-            <div v-if="name === 'DateTime'">
-                <date-time :data="value.entry" />
+            <div v-if="name === 'MyCards' || name === 'Portfolio' && value.loyalty.length">
+                <h4 v-if="name === 'Portfolio'">Система скидок:</h4>
+                <loyalty :data="value.loyalty" />
             </div>
         </div>
     </div>
