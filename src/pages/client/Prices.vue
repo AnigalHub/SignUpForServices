@@ -8,8 +8,6 @@
   export default {
     name: 'Prices',
     props: {
-      name: String,
-      title: String,
       data: Array,
     },
     data() {
