@@ -11,6 +11,7 @@ import DateTime from './client/DateTimeStore';
 import Prices from './client/PricesStore';
 import Portfolio from './client/PortfolioStore';
 import Works from './client/WorksStore';
+import MyWorks from './client/MyWorksStore';
 
 import SettingsInterface from './common/SettingsInterfaceStore';
 import SettingsProfile from './common/SettingsProfileStore';
@@ -33,6 +34,7 @@ export default new Vuex.Store({
     Prices,
     Portfolio,
     Works,
+    MyWorks,
 
     SettingsInterface,
     SettingsProfile,
