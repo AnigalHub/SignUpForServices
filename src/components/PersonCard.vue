@@ -44,14 +44,9 @@
                        text="Перенести запись"
                     />
                 </b-col>
-                <i
-                   v-if="name === 'SearchSpecialist' || name === 'MyEntries'"
-                   class="bi bi-heart"
-                ></i>
-                <i v-if="name === 'MySpecialists' || name === 'MyCards' || name === 'WorksSpecialists'"
-                  class="bi bi-heart-fill"
-                ></i>
-                <i v-if="name === 'Entry' || name === 'DateTime' || name === 'Prices' || name === 'Portfolio'" class="bi bi-box-arrow-up-right"></i>
+                <i v-if="name === 'SearchSpecialist' || name === 'MyEntries'" class="bi bi-heart"></i>
+                <i v-if="name === 'MySpecialists' || name === 'MyCards' || name === 'WorksSpecialists'" class="bi bi-heart-fill"></i>
+                <i v-if="name === 'Entry' || name === 'DateTime' || name === 'Prices' || name === 'Works' || name === 'MyWorks' || name === 'Portfolio'" class="bi bi-box-arrow-up-right"></i>
             </b-row>
             <div v-if="name === 'Entry'">
                 <entry :data="value" />
@@ -62,6 +57,8 @@
             </div>
             <div v-if="name === 'Works' || name === 'MyWorks' || name === 'Portfolio'">
                 <h4 v-if="name === 'Portfolio'">Портфолио работ:</h4>
+                <h4 v-if="name === 'Works'">Все работы</h4>
+                <h4 v-if="name === 'MyWorks'">Мои работы</h4>
                 <works v-if="name === 'MyWorks'" :data="value.works" :id="id"/>
                 <works v-else :data="value.works"/>
             </div>

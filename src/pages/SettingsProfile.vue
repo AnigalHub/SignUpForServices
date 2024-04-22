@@ -1,11 +1,11 @@
 <template>
     <div>
         <h3>{{ title }}</h3>
-        <form-area :data="information.fio" :name="name" :dataBase="dataToShow" />
+        <form-area :data="information.fio" :name="name" :img="true" :dataBase="dataToShow" />
         <h5>Логин и пароль</h5>
-        <form-area :data="information.login_up" :dataBase="dataToShow" />
+        <form-area :data="information.login_up" :name="name" :dataBase="dataToShow" />
         <h5>Другие данные</h5>
-        <form-area :data="information.other_data" :dataBase="dataToShow" />
+        <form-area :data="information.other_data" :name="name" :dataBase="dataToShow" />
         <div class="buttons">
             <button-template class="buttonBackStyles" text="Назад" />
         </div>

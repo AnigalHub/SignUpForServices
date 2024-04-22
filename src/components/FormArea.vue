@@ -1,34 +1,38 @@
 <template>
     <div :class="[name === 'SearchSpecialist' ? 'searchArea' : 'formArea']">
-        <div v-if="name === 'Registration' || name === 'SettingsProfile'"  class="grid-container">
+        <div v-if="img"  class="grid-container">
             <div v-if="!dataBase" class="img">
                 Загрузить изображение
             </div>
             <img v-if="dataBase" :src="dataBase[0].src" />
         </div>
-        <div :style="layoutStyles" style="display: grid">
-            <div v-for="(value, index) in pushArray" :key="index">
-                <div style="margin: 0 10px">
-                    <label v-if="value.label" :for="value.label" :type="value.type">
-                        {{ value.label }}:
-                    </label>
-                    <div class="input">
-                        <div v-if="name === 'SearchSpecialist'" class="icon">
-                            <i class="bi bi-search"></i>
+        <div style="display: flex">
+            <div style="display: grid; width: 100%;">
+                <div v-for="(value, index) in pushArray" :key="index">
+                    <div style="margin: 0 10px;">
+                        <label v-if="value.label" :for="value.label" :type="value.type">
+                            {{ value.label }}:
+                        </label>
+                        <div class="input">
+                            <div v-if="name === 'SearchSpecialist'" class="icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <b-form-input
+                                    :id="value.label"
+                                    v-model="value.value"
+                                    v-mask="value.mask"
+                                    autocomplete="off"
+                                    :placeholder="value.placeholder"
+                                    :type="value.type"
+                            >
+                            </b-form-input>
                         </div>
-                        <b-form-input
-                             :id="value.label"
-                             v-model="value.value"
-                             v-mask="value.mask"
-                             autocomplete="off"
-                             :placeholder="value.placeholder"
-                             :type="value.type"
-                        >
-                        </b-form-input>
                     </div>
                 </div>
             </div>
+            <i v-if="name === 'SettingsProfile'" class="bi bi-pencil-square"></i>
         </div>
+
     </div>
 </template>
 
@@ -40,10 +44,7 @@
       data: Array,
       dataBase: Array,
       model: String,
-      layoutStyles: {
-        type: Object,
-        default: () => ({}),
-      },
+      img: Boolean
     },
     data() {
       return {
