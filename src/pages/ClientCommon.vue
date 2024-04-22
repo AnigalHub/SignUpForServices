@@ -7,7 +7,7 @@
            :data="information.search"
            :model="searchName"
         />
-        <person-card :name="name" :data="dataToShow" />
+        <person-card :name="name" :data="dataToShow" :id="id"/>
         <div class="buttons">
             <button-template class="buttonBackStyles" text="Назад" />
         </div>
@@ -34,6 +34,9 @@
     computed: {
       searchName(){
         return this.currentClass?.search ?? ''
+      },
+      id(){
+        return this.currentClass?.id ?? ''
       },
       currentClass() {
         return this.$store.state[this.name];

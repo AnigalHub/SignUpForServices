@@ -30,7 +30,7 @@
                 </b-col>
                 <b-col v-if="name === 'WorksSpecialists'" cols="3">
                     <button-template class="buttonStyles" href="/client/Works" text="Все работы" />
-                    <button-template class="buttonStyles" href="" text="Мои работы" />
+                    <button-template class="buttonStyles" href="/client/MyWorks" text="Мои работы" />
                 </b-col>
                 <b-col v-if="name === 'MyEntries'" cols="3">
                     <p class="time">{{ value.time }}</p>
@@ -60,9 +60,10 @@
                 <h4 v-if="name === 'Portfolio'">Выбор даты и времени:</h4>
                 <date-time :data="value.entry" />
             </div>
-            <div v-if="name === 'Works' || name === 'Portfolio'">
+            <div v-if="name === 'Works' || name === 'MyWorks' || name === 'Portfolio'">
                 <h4 v-if="name === 'Portfolio'">Портфолио работ:</h4>
-                <works :data="value.works"/>
+                <works v-if="name === 'MyWorks'" :data="value.works" :id="id"/>
+                <works v-else :data="value.works"/>
             </div>
             <div v-if="name === 'MyCards' || name === 'Portfolio' && value.loyalty.length">
                 <h4 v-if="name === 'Portfolio'">Система скидок:</h4>
@@ -91,6 +92,7 @@
     props: {
       name: String,
       data: Array,
+      id: String
     },
     methods: {
       getWeekDay(date) {

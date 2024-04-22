@@ -1,6 +1,6 @@
 <template>
     <div class="works">
-        <div v-for="(el, index) in data" :key="index">
+        <div v-for="(el, index) in filterData" :key="index">
             <div>
                 <img :src="el.src">
             </div>
@@ -13,7 +13,13 @@
     name: 'Works',
     props: {
       data: Array,
+      id: String
     },
+    computed: {
+      filterData() {
+          return this.id ? this.data.filter((el) => el.id_client === this.id) : this.data;
+      }
+    }
   }
 </script>
 
