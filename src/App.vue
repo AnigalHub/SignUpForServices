@@ -258,7 +258,7 @@
       margin-bottom: 0;
     }
   }
-  .prices {
+  .prices, .works{
     width: 100%;
     background: var(--backgroundDiv);
     border-radius: var(--borderRadiusDiv);
