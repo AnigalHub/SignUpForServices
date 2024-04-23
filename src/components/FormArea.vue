@@ -6,10 +6,10 @@
             </div>
             <img v-if="dataBase" :src="dataBase[0].src" />
         </div>
-        <div style="display: flex">
-            <div style="display: grid; width: 100%;">
+        <div class="flexBlock">
+            <div class="blockInput">
                 <div v-for="(value, index) in pushArray" :key="index">
-                    <div style="margin: 0 10px;">
+                    <div class="input">
                         <label v-if="value.label" :for="value.label" :type="value.type">
                             {{ value.label }}:
                         </label>

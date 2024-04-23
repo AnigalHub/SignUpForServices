@@ -290,6 +290,15 @@
     font-weight: 500;
     color: #0c59ab;
   }
+  .flexBlock{
+    display: flex;
+  }
+  .blockInput{
+    display: grid; width: 100%;
+    .input{
+      margin: 0 10px;
+    }
+  }
   @media (min-width: 1200px){
    .container{
      max-width: 1110px !important;
