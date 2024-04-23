@@ -20,7 +20,25 @@
     },
   };
 </script>
-
+<style>
+  .modal-header .close {
+    width: auto;
+    font-size: 2rem;
+  }
+  .modal-open {
+    overflow: hidden;
+  }
+  .modal-content{
+    box-shadow: 5px 5px 5px #55595c;
+  }
+  /*футер модального окна*/
+  .modal-footer {display: none !important;}
+  /*заголовок модального окна*/
+  .modal-header{
+    padding: 0 0.5rem !important;
+    background: var(--background);
+  }
+</style>
 <style lang="scss">
   @import './../public/style.css';
 
@@ -173,9 +191,6 @@
   }
   .icon i:before {
     font-size: 1rem;
-  }
-  .input {
-    display: flex;
   }
   label {
     margin-bottom: -0.05rem;

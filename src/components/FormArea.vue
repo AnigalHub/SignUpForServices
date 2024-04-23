@@ -30,9 +30,41 @@
                     </div>
                 </div>
             </div>
-            <i v-if="name === 'SettingsProfile'" class="bi bi-pencil-square"></i>
+            <i @click="showModal(pushArray)" v-if="name === 'SettingsProfile'" class="bi bi-pencil-square"></i>
         </div>
-
+        <b-modal ref="my-modal" id="img" size="lg" centered>
+            <div v-if="img"  class="grid-container">
+                <div v-if="!dataBase" class="img">
+                    Загрузить изображение
+                </div>
+                <img v-if="dataBase" :src="dataBase[0].src" />
+            </div>
+            <div class="flexBlock">
+                <div class="blockInput">
+                    <div v-for="(value, index) in pushArray" :key="index">
+                        <div class="input">
+                            <label v-if="value.label" :for="value.label" :type="value.type">
+                                {{ value.label }}:
+                            </label>
+                            <div class="input">
+                                <div v-if="name === 'SearchSpecialist'" class="icon">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                                <b-form-input
+                                        :id="value.label"
+                                        v-model="value.value"
+                                        v-mask="value.mask"
+                                        autocomplete="off"
+                                        :placeholder="value.placeholder"
+                                        :type="value.type"
+                                >
+                                </b-form-input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </b-modal>
     </div>
 </template>
 
@@ -49,6 +81,10 @@
     data() {
       return {
         array: [],
+        modalShow: false,
+        selectedLicense:{
+          href:''
+        },
       };
     },
     created () {
@@ -81,6 +117,12 @@
         return this.array;
       },
     },
+    methods: {
+      showModal(license) {
+        this.selectedLicense = license;
+        this.$refs['my-modal'].show()
+      },
+    }
   };
 </script>
 
@@ -95,9 +137,6 @@
     }
     .icon i:before {
         font-size: 1rem;
-    }
-    .input {
-        display: flex;
     }
     label {
         margin-bottom: -0.05rem;
@@ -124,6 +163,7 @@
         border-right: none;
         padding: 0.375rem 0.15rem;
         margin-bottom: 1rem;
+        margin-left: -12px;
     }
     .recommendations,
     .img {
