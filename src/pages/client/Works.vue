@@ -23,17 +23,4 @@
   }
 </script>
 
-<style scoped>
-    /*контейнер, который включает в себя повтор блоков*/
-    .works{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .works > div{
-        width: 25%;
-        padding: 8px;
-    }
-    img{
-        width: 100%;
-    }
-</style>
+<style scoped></style>

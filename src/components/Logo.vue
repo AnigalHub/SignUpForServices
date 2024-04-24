@@ -11,17 +11,4 @@
   };
 </script>
 
-<style scoped lang="scss">
-    .logo {
-        text-align: center;
-        font-family: 'Miltonian Tattoo', serif;
-        .short_name {
-            margin-top: -5px;
-            font-size: 1.3rem;
-        }
-        .long_name {
-            font-size: 0.8rem;
-            margin-top: -5px;
-        }
-    }
-</style>
+<style scoped></style>

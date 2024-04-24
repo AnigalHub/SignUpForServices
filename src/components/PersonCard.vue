@@ -99,8 +99,4 @@
   };
 </script>
 
-<style scoped>
-    i:before {
-        font-size: 1.5rem;
-    }
-</style>
+<style scoped></style>

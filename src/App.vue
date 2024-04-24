@@ -42,6 +42,9 @@
 <style lang="scss">
   @import './../public/style.css';
 
+  i:before, .bi-box-arrow-up-right::before  {
+    font-size: 1.5rem;
+  }
   #app {
     background: var(--background);
     min-height: 100vh;
@@ -107,8 +110,58 @@
       }
     }
   }
-  i:before {
-    font-size: 1.8rem;
+  .entryes {
+    a {
+      color: var(--colorText);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .pre {
+    margin-top: 2%;
+    white-space: pre-line;
+  }
+  .entry {
+    background: var(--backgroundDiv);
+    border-radius: var(--borderRadiusDiv);
+    padding: 20px;
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 1rem;
+    float: left;
+    box-shadow: var(--shadow);
+  }
+  .entry:nth-child(2) {
+    margin-right: 0;
+    width: 49%;
+  }
+  .entry:last-child{
+    margin-bottom: 1.5rem;
+  }
+  .logo {
+    text-align: center;
+    font-family: 'Miltonian Tattoo', serif;
+    .short_name {
+      margin-top: -5px;
+      font-size: 1.3rem;
+    }
+    .long_name {
+      font-size: 0.8rem;
+      margin-top: -5px;
+    }
+  }
+  /*контейнер, который включает в себя повтор блоков*/
+  .works{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .works > div{
+    width: 25%;
+    padding: 8px;
+  }
+  img{
+    width: 100%;
   }
   input[type='radio'],
   input[type='checkbox'] {

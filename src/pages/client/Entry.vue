@@ -46,34 +46,4 @@
   };
 </script>
 
-<style scoped lang="scss">
-    .entryes {
-        a {
-            color: var(--colorText);
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-    .pre {
-        margin-top: 2%;
-        white-space: pre-line;
-    }
-    .entry {
-        background: var(--backgroundDiv);
-        border-radius: var(--borderRadiusDiv);
-        padding: 20px;
-        width: 49%;
-        margin-right: 2%;
-        margin-bottom: 1rem;
-        float: left;
-        box-shadow: var(--shadow);
-    }
-    .entry:nth-child(2) {
-        margin-right: 0;
-        width: 49%;
-    }
-    .entry:last-child{
-        margin-bottom: 1.5rem;
-    }
-</style>
+<style scoped lang="scss"></style>
