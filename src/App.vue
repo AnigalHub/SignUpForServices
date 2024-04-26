@@ -158,7 +158,7 @@
   }
   .works > div{
     width: 25%;
-    padding: 8px;
+    padding: 1.25%;
   }
   img{
     width: 100%;
@@ -193,7 +193,7 @@
     margin-bottom: 0.5rem;
   }
   .phrase {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .img_specialist {
     border-radius: 50%;
@@ -361,10 +361,15 @@
   .flexBlock{
     display: flex;
   }
+  .bi-search{
+    margin-left: -100%;
+  }
   .blockInput{
-    display: grid; width: 100%;
+    width: 100%;
     .input{
+      display: flex;
       margin: 0 10px;
+      width: 100%;
     }
   }
   @media (min-width: 1200px){
