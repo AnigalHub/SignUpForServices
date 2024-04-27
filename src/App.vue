@@ -246,6 +246,7 @@
     font-size: 1rem;
   }
   label {
+    margin-left: -10px;
     margin-bottom: -0.05rem;
   }
   .searchArea {
@@ -361,17 +362,26 @@
   .flexBlock{
     display: flex;
   }
-  .bi-search{
-    margin-left: -100%;
-  }
   .blockInput{
-    width: 100%;
+    display: grid; width: 100%;
+    grid-template-columns: repeat(3, 1fr);
     .input{
-      display: flex;
       margin: 0 10px;
+    }
+
+  }
+  .blockSearch{
+    width: 100%;
+    margin-left: 20px;
+    .inputSearch{
+      display: flex;
       width: 100%;
+      .bi-search{
+        margin-left: -100%;
+      }
     }
   }
+
   @media (min-width: 1200px){
    .container{
      max-width: 1110px !important;

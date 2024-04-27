@@ -7,13 +7,14 @@
             <img v-if="dataBase" :src="dataBase[0].src" />
         </div>
         <div class="flexBlock">
-            <div class="blockInput">
+            <div :class="[name === 'SearchSpecialist' || name === 'SettingsProfile' ? 'blockSearch' : 'blockInput']">
                 <div v-for="(value, index) in pushArray" :key="index">
-                    <div class="input">
+                    <div :class="[name === 'SearchSpecialist' ? 'inputSearch' : 'input']">
+
                         <label v-if="value.label" :for="value.label" :type="value.type">
                             {{ value.label }}:
                         </label>
-                        <div class="input">
+                        <div :class="[name === 'SearchSpecialist' ? 'inputSearch' : 'input']">
                             <div v-if="name === 'SearchSpecialist'" class="icon">
                                 <i class="bi bi-search"></i>
                             </div>
@@ -46,8 +47,10 @@
                             <label v-if="value.label" :for="value.label" :type="value.type">
                                 {{ value.label }}:
                             </label>
+                            {{name}}
                             <div class="input">
                                 <div v-if="name === 'SearchSpecialist'" class="icon">
+                                    {{name}}
                                     <i class="bi bi-search"></i>
                                 </div>
                                 <b-form-input
