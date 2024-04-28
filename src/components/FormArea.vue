@@ -34,46 +34,52 @@
             <i @click="showModal(pushArray)" v-if="name === 'SettingsProfile'" class="bi bi-pencil-square"></i>
         </div>
         <b-modal ref="my-modal" id="img" size="lg" centered>
-            <div v-if="img"  class="grid-container">
-                <div v-if="!dataBase" class="img">
-                    Загрузить изображение
+            <div>
+                <div v-if="img"  class="grid-container">
+                    <div v-if="!dataBase" class="img">
+                        Загрузить изображение
+                    </div>
+                    <img v-if="dataBase" :src="dataBase[0].src" />
                 </div>
-                <img v-if="dataBase" :src="dataBase[0].src" />
-            </div>
-            <div class="flexBlock">
-                <div class="blockInput">
-                    <div v-for="(value, index) in pushArray" :key="index">
-                        <div class="input">
-                            <label v-if="value.label" :for="value.label" :type="value.type">
-                                {{ value.label }}:
-                            </label>
-                            {{name}}
+                <div class="flexBlock">
+                    <div class="blockInput">
+                        <div v-for="(value, index) in pushArray" :key="index">
                             <div class="input">
-                                <div v-if="name === 'SearchSpecialist'" class="icon">
-                                    {{name}}
-                                    <i class="bi bi-search"></i>
+                                <label v-if="value.label" :for="value.label" :type="value.type">
+                                    {{ value.label }}:
+                                </label>
+
+                                <div class="input">
+                                    <div v-if="name === 'SearchSpecialist'" class="icon">
+                                        {{name}}
+                                        <i class="bi bi-search"></i>
+                                    </div>
+                                    <b-form-input
+                                            :id="value.label"
+                                            v-model="value.value"
+                                            v-mask="value.mask"
+                                            autocomplete="off"
+                                            :placeholder="value.placeholder"
+                                            :type="value.type"
+                                    >
+                                    </b-form-input>
                                 </div>
-                                <b-form-input
-                                        :id="value.label"
-                                        v-model="value.value"
-                                        v-mask="value.mask"
-                                        autocomplete="off"
-                                        :placeholder="value.placeholder"
-                                        :type="value.type"
-                                >
-                                </b-form-input>
                             </div>
                         </div>
                     </div>
                 </div>
+                <button-template class="buttonStyles" text="Сохранить" href=""/>
+                <button-template class="buttonCancelStyles" text="Отменить" href=""/>
             </div>
         </b-modal>
     </div>
 </template>
 
 <script>
+  import ButtonTemplate from '@/components/ButtonTemplate'
   export default {
     name: 'FormArea',
+    components: { ButtonTemplate },
     props: {
       name: String,
       data: Array,

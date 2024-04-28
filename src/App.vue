@@ -181,6 +181,14 @@
     margin-top: 0.5rem;
     text-align: left;
   }
+  .buttonCancelStyles button {
+    min-height: 45px;
+    border-radius: var(--borderRadiusButton);
+    background: var(--backgroundButtonBack);
+    color: var(--colorButtonBack);
+    margin-top: 0.5rem;
+    text-align: center;
+  }
   .buttonBackIconStyles {
     fill: var(--colorButtonBack);
   }
@@ -361,14 +369,22 @@
   }
   .flexBlock{
     display: flex;
+    .blockInput{
+      display: block;
+    }
   }
   .blockInput{
-    display: grid; width: 100%;
+    display: grid;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     .input{
       margin: 0 10px;
     }
-
+  }
+  .modal-body{
+    label{
+      margin-left: 0;
+    }
   }
   .blockSearch{
     width: 100%;
