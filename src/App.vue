@@ -257,6 +257,14 @@
     margin-left: -10px;
     margin-bottom: -0.05rem;
   }
+  input[type="radio"]{
+    margin-right: 20px;
+  }
+  .blockInput{
+    label{
+      margin-left: 0;
+    }
+  }
   .searchArea {
     background: var(--backgroundDiv);
     border-radius: 50px;
@@ -372,11 +380,22 @@
     .blockInput{
       display: block;
     }
+    .blockTheme{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      label{
+        margin-left: 0;
+      }
+    }
   }
-  .blockInput{
-    display: grid;
+  .themes{
+    border: 2px solid transparent;
+  }
+  .themes:hover{
+    border: 2px solid black;
+  }
+  .blockInput,.blockTheme{
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
     .input{
       margin: 0 10px;
     }

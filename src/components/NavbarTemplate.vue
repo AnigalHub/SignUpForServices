@@ -22,8 +22,13 @@
                          :to="list.href"
                     >{{ list.name }}
                     </b-nav-item>
-                    <!--<b-nav-item  class="menu" v-for="(list,index) in information.specialist_menu"
-                    to="" :key="index">{{list.name}}</b-nav-item>-->
+<!--                    <b-nav-item-->
+<!--                        v-for="(list,index) in information.specialist_menu"-->
+<!--                        :key="index"-->
+<!--                        class="menu"-->
+<!--                        to="list.href">-->
+<!--                    {{list.name}}-->
+<!--                    </b-nav-item>-->
                 </b-navbar-nav>
                 <b-icon
                     class="icon_person"

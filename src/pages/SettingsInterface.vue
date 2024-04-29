@@ -14,9 +14,9 @@
         </div>
         <input id="2" v-model="someProperty" type="radio" value="2" />
         <label for="2">Настройка темы</label>
-        <form-area :data="information.themes" :layoutStyles="layoutStyles" />
+        <form-area :data="information.themes" :name="name" :layoutStyles="layoutStyles" />
         <div class="buttons">
-            <button-template class="buttonStyles" text="Сохранить" />
+            <button-template class="buttonStyles" text="Сохранить"/>
             <button-template class="buttonBackStyles" text="Назад" />
         </div>
     </div>

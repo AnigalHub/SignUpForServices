@@ -4,7 +4,7 @@
             <b-icon icon="arrow-return-left" class="buttonBackIconStyles"></b-icon>
             <span>{{ text }}</span>
         </b-button>
-        <router-link v-else :to="href" tag="button" :style="styles">
+        <router-link v-else :to="href || '' " tag="button" :style="styles">
             {{text}}
         </router-link>
     </div>

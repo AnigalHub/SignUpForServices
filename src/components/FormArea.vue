@@ -7,7 +7,7 @@
             <img v-if="dataBase" :src="dataBase[0].src" />
         </div>
         <div class="flexBlock">
-            <div :class="[name === 'SearchSpecialist' || name === 'SettingsProfile' ? 'blockSearch' : 'blockInput']">
+            <div :class="[name === 'SearchSpecialist' || name === 'SettingsProfile' ? 'blockSearch' : name === 'SettingsInterface' ? 'blockTheme' : 'blockInput' ]">
                 <div v-for="(value, index) in pushArray" :key="index">
                     <div :class="[name === 'SearchSpecialist' ? 'inputSearch' : 'input']">
 
@@ -68,8 +68,8 @@
                         </div>
                     </div>
                 </div>
-                <button-template class="buttonStyles" text="Сохранить" href=""/>
-                <button-template class="buttonCancelStyles" text="Отменить" href=""/>
+                <button-template class="buttonStyles" text="Сохранить"/>
+                <button-template class="buttonCancelStyles" text="Отменить"/>
             </div>
         </b-modal>
     </div>
