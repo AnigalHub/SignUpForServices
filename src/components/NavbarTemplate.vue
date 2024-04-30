@@ -2,7 +2,7 @@
     <b-navbar id="Nav" class="navbar-expand-lg sticky-top" toggleable>
         <b-container>
             <b-navbar-brand to="/">
-                <logo />
+                <logo/>
             </b-navbar-brand>
             <b-navbar-toggle target="navbar-toggle-collapse">
                 <template v-slot:default="{ expanded }">
@@ -15,20 +15,21 @@
                is-nav
             >
                 <b-navbar-nav>
-                    <b-nav-item
-                         v-for="(list, index) in information.client_menu"
-                         :key="index"
-                         class="menu"
-                         :to="list.href"
-                    >{{ list.name }}
-                    </b-nav-item>
 <!--                    <b-nav-item-->
-<!--                        v-for="(list,index) in information.specialist_menu"-->
-<!--                        :key="index"-->
-<!--                        class="menu"-->
-<!--                        to="list.href">-->
-<!--                    {{list.name}}-->
+<!--                         v-for="(list, index) in information.client_menu"-->
+<!--                         :key="index"-->
+<!--                         class="menu"-->
+<!--                         :to="list.href"-->
+<!--                    >{{ list.name }}-->
 <!--                    </b-nav-item>-->
+                    <b-nav-item
+                        v-for="(list,index) in information.specialist_menu"
+                        :key="index"
+                        class="menu"
+                        to="list.href"
+                    >
+                    {{list.name}}
+                    </b-nav-item>
                 </b-navbar-nav>
                 <b-icon
                     class="icon_person"
@@ -76,6 +77,11 @@
 </script>
 
 <style scoped lang="scss">
+    .navbar-nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     .desktop {
         background-color: white;
         box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
