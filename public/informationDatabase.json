@@ -317,8 +317,23 @@
       "patronymic": " ",
       "login": "Anigal",
       "password": "********",
-      "telephone": "903-151-39-31",
+      "telephone": "8(903)-151-39-31",
       "address": "ул.Уссурийская д1к4 кв 56",
+      "date": "2023-02-04T00:00:00.000+00:00",
+      "clientCategory": "client"
+    },
+    {
+      "id_client": "33",
+      "src": "../client1.jpg",
+      "alt": "",
+      "name": "Анастасия",
+      "surname": "Абрамова",
+      "patronymic": " ",
+      "login": "Nasty",
+      "password": "********",
+      "telephone": "8(965)-399-32-59",
+      "address": "Щелковское ш. 100, стр. 10",
+      "date": "2023-02-05T00:00:00.000+00:00",
       "clientCategory": "client"
     }
   ],
