@@ -26,7 +26,7 @@
                         v-for="(list,index) in information.specialist_menu"
                         :key="index"
                         class="menu"
-                        to="list.href"
+                        :to="list.href"
                     >
                     {{list.name}}
                     </b-nav-item>

@@ -21,9 +21,7 @@ export const searchEntries = (id_client, array1, array2) => {
 export const searchClient = (id, array) => {
   const newArray = [];
   array.forEach((obj) => {
-    console.log('obj', obj, id);
     if (obj.id_client === id || obj.id === id) {
-      console.log('OBJ', obj);
       newArray.push(obj);
     }
   });
