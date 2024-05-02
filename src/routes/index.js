@@ -31,5 +31,11 @@ export default[
     name: 'common',
     component: () => import("../pages/ClientCommon"),
     props: true
+  },
+  {
+    path: '/specialist/:name',
+    name: 'common',
+    component: () => import("../pages/SpecialistCommon"),
+    props: true
   }
 ]
