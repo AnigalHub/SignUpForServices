@@ -13,10 +13,14 @@
                 </b-col>
                 <b-col>
                     <b>{{ value.surname }} {{ value.name }} {{ value.patronymic }}</b>
-                    <p>|
-                        <span v-for="(category, index) in value.category" :key="index">
-              {{ category }} |
-            </span>
+                    <p>
+
+                        <span v-if="clientCategory === 'client'" v-for="(category, index) in value.category" :key="index">
+                         | {{ category }} |
+                        </span>
+                        <span v-if="clientCategory === 'specialist'">
+                         {{ value.telephone }}
+                        </span>
                     </p>
                     <p class="registTime">На сайте с {{ new Date(value.date).toLocaleDateString() }}</p>
                     <p>{{ value.address }}</p>
@@ -31,6 +35,10 @@
                 <b-col v-if="name === 'WorksSpecialists'" cols="3">
                     <button-template class="buttonStyles" href="/client/Works" text="Все работы" />
                     <button-template class="buttonStyles" href="/client/MyWorks" text="Мои работы" />
+                </b-col>
+                <b-col v-if="name === 'Clients'" cols="3">
+                    <button-template class="buttonStyles" href="" text="Лояльность" />
+                    <button-template class="buttonStyles" href="" text="Заблокировать" />
                 </b-col>
                 <b-col v-if="name === 'MyEntries'" cols="3">
                     <p class="time">{{ value.time }}</p>
@@ -88,6 +96,7 @@
     components: { Works, DateTime, Prices, Entry, Loyalty, ButtonTemplate },
     props: {
       name: String,
+      clientCategory: String,
       data: Array,
       id: String
     },
