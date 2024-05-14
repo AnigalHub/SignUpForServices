@@ -364,6 +364,7 @@
     {
       "src": "./themes/grey.jpg",
       "alt": "Серая тема",
+      "type": "grey",
       "styles": {
         "--background": "#F3F3F4",
         "--borderColorButton": "black",
@@ -388,6 +389,7 @@
     {
       "src": "./themes/blue.jpg",
       "alt": "Голубая тема",
+      "type": "blue",
       "styles": {
         "--background": "#f1f9fc",
         "--borderColorButton": "#78c4e6",
@@ -412,6 +414,7 @@
     {
       "src": "./themes/pink.jpg",
       "alt": "Розовая тема",
+      "type": "pink",
       "styles": {
         "--background": "#ffe7e3",
         "--borderColorButton": "#a9746c",
@@ -436,6 +439,7 @@
     {
       "src": "./themes/yellow.jpg",
       "alt": "Желтая тема",
+      "type": "yellow",
       "styles": {
         "--background": "#ede8d2",
         "--borderColorButton": "#6c5c0f",
@@ -460,6 +464,7 @@
     {
       "src": "./themes/green.jpg",
       "alt": "Зеленая тема",
+      "type": "green",
       "styles": {
         "--background": "#effaf2",
         "--borderColorButton": "#137c2a",
@@ -484,6 +489,7 @@
     {
       "src": "./themes/purple.jpg",
       "alt": "Фиолетовая тема",
+      "type": "purple",
       "styles": {
         "--background": "#ebeafa",
         "--borderColorButton": "#2c2b65",

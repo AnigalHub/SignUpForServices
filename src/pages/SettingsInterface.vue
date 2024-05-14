@@ -10,6 +10,7 @@
                 :src="theme.src"
                 :alt="'тема' + (index + 1)"
                 class="themes"
+                @click="changeTheme(theme.type)"
             />
         </div>
         <input id="2" v-model="someProperty" type="radio" value="2" />
@@ -62,6 +63,9 @@
     methods: {
       async getData() {
         await this.$store.dispatch(`${this.name}/getData`);
+      },
+      changeTheme(theme){
+        this.$store.commit('SettingsInterface/selectTheme', theme)
       },
     },
   };
