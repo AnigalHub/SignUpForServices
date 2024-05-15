@@ -1,9 +1,11 @@
 :root {
+    --backgroundOpacity: rgba(255, 255, 255, .45);
+}
+.grey, .light{
     --background: #F3F3F4;
     --borderColorButton: black;
     --backgroundContent: none;
     --backgroundDiv: white;
-    --backgroundOpacity: rgb(255 255 255 / 45%);
     --borderRadiusContent: none;
     --borderRadiusDiv: 10px;
     --borderColorContent: none;
@@ -15,7 +17,107 @@
     --backgroundButtonBack: black;
     --colorButtonBack: white;
     --fontStylesText: normal;
-    --fontStylesH: 'Marmelad', sans-serif;
+    --fontStylesH: 'Marmelad' sans-serif;
     --borderRadiusButton: 15px;
+    --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+}
+.blue{
+    --background: #f1f9fc;
+    --borderColorButton: #78c4e6;
+    --backgroundContent: none;
+    --backgroundDiv: white;
+    --borderRadiusContent: none;
+    --borderRadiusDiv: 10px;
+    --borderColorContent: none;
+    --borderColorDiv: #78c4e6;
+    --colorTitle: black;
+    --colorText: black;
+    --backgroundButton: white;
+    --colorButton: black;
+    --backgroundButtonBack: black;
+    --colorButtonBack: white;
+    --fontStylesText: normal;
+    --fontStylesH: 'Marmelad' sans-serif;
+    --borderRadiusButton: 10px;
+    --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+}
+.pink{
+    --background: #ffe7e3;
+    --borderColorButton: #a9746c;
+    --backgroundContent: none;
+    --backgroundDiv: white;
+    --borderRadiusContent: none;
+    --borderRadiusDiv: 10px;
+    --borderColorContent: none;
+    --borderColorDiv: #a9746c;
+    --colorTitle: black;
+    --colorText: black;
+    --backgroundButton: white;
+    --colorButton: black;
+    --backgroundButtonBack: black;
+    --colorButtonBack: white;
+    --fontStylesText: normal;
+    --fontStylesH: 'Marmelad' sans-serif;
+    --borderRadiusButton: 10px;
+    --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+}
+.yellow{
+    --background: #ede8d2;
+    --borderColorButton: #6c5c0f;
+    --backgroundContent: none;
+    --backgroundDiv: white;
+    --borderRadiusContent: none;
+    --borderRadiusDiv: 10px;
+    --borderColorContent: none;
+    --borderColorDiv: #6c5c0f;
+    --colorTitle: black;
+    --colorText: black;
+    --backgroundButton: white;
+    --colorButton: black;
+    --backgroundButtonBack: #6c5c0f;
+    --colorButtonBack: white;
+    --fontStylesText: normal;
+    --fontStylesH: 'Marmelad' sans-serif;
+    --borderRadiusButton: 10px;
+    --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+}
+.green{
+    --background: #effaf2;
+    --borderColorButton: #137c2a;
+    --backgroundContent: none;
+    --backgroundDiv: white;
+    --borderRadiusContent: none;
+    --borderRadiusDiv: 10px;
+    --borderColorContent: none;
+    --borderColorDiv: #137c2a;
+    --colorTitle: black;
+    --colorText: black;
+    --backgroundButton: white;
+    --colorButton: black;
+    --backgroundButtonBack: #137c2a;
+    --colorButtonBack: white;
+    --fontStylesText: normal;
+    --fontStylesH: 'Marmelad' sans-serif;
+    --borderRadiusButton: 10px;
+    --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+}
+.purple{
+    --background: #ebeafa;
+    --borderColorButton: #2c2b65;
+    --backgroundContent: none;
+    --backgroundDiv: white;
+    --borderRadiusContent: none;
+    --borderRadiusDiv: 10px;
+    --borderColorContent: none;
+    --borderColorDiv: #2c2b65;
+    --colorTitle: black;
+    --colorText: black;
+    --backgroundButton: white;
+    --colorButton: black;
+    --backgroundButtonBack: #2c2b65;
+    --colorButtonBack: white;
+    --fontStylesText: normal;
+    --fontStylesH: 'Marmelad' sans-serif;
+    --borderRadiusButton: 10px;
     --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
 }
