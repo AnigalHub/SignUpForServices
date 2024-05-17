@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <navbar-template />
-    <b-container style="min-height: 82vh; margin-bottom: 3vh">
-      <router-view />
-    </b-container>
-    <footer-template />
+    <div :class="currentTheme" class="content">
+      <navbar-template/>
+      <b-container style="min-height: 82vh; margin-bottom: 3vh">
+        <router-view/>
+      </b-container>
+      <footer-template/>
+    </div>
   </div>
 </template>
 
@@ -17,6 +19,14 @@
     components: {
       FooterTemplate,
       NavbarTemplate,
+    },
+    created() {
+      this.$store.dispatch('SettingsInterface/loadTheme')
+    },
+    computed: {
+      currentTheme(){
+        return this.$store.getters['SettingsInterface/CurrentTheme']
+      },
     },
   };
 </script>
@@ -45,10 +55,13 @@
   i:before, .bi-box-arrow-up-right::before  {
     font-size: 1.5rem;
   }
-  #app {
+  .content{
     background: var(--background);
     min-height: 100vh;
     padding: 0;
+  }
+  #app {
+
   }
   .row{
     display: flex;
@@ -231,6 +244,7 @@
     margin-bottom: 1.5rem;
   }
   .discount {
+    text-align: center;
     margin-bottom: 8px;
   }
   .size_discount {
